@@ -52,9 +52,6 @@
     height: 100%;
     border-bottom: 3px solid transparent;
 }
-.fa-code {
-    margin-left: 1rem;
-}
 
 .nav-item {
     line-height: 40px;
@@ -72,12 +69,7 @@
 
 .nav-item:hover:after {
     width: 100%;
-    background: #ffdd40;
-}
-
-.nav-item.active {
-    color: #ffdd40;
-    border: 1px solid #ffdd40;
+    background: #fff;
 }
 
 .nav-icon {
@@ -89,9 +81,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        border-top: 1pxsolid #fff;
+        border-top: 1px solid #fff;
         position: absolute;
-        top: 80px;
+        top: 64px;
         left: -110%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -99,14 +91,10 @@
 
     .nav-menu.active {
         background: #1f5156;
-        left: 0px;
+        left: 0;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 1;
-    }
-    .nav-item .active {
-        color: #ffdd40;
-        border: none;
     }
 
     .nav-links {
@@ -116,16 +104,16 @@
     }
 
     .nav-icon {
-        display: block;
-        font-size: 1.8rem;
+        display: flex;
+        font-size: 1.5rem;
         cursor: pointer;
         color: #fff;
         margin-right: 1.5rem;
     }
 }
 
-.font-nanum-myeongjo {
-    font-family: var(--font-nanum-myeongjo), serif;
+.font-nanum {
+    font-family: var(--font-nanum), serif;
 }
 
 .font-barlow {

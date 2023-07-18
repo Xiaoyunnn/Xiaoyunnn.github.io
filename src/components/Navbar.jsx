@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div>
+        <div className="font-nanum">
             <div
                 className={open ? "main-container" : ""}
                 onClick={() => Close()}
@@ -28,29 +29,23 @@ const Navbar = () => {
                     <Link href="/" className="nav-logo">
                         xy.
                     </Link>
-                    <div>
-                        <ul className={open ? "nav-menu active" : "nav-menu"}>
-                            {navLinks.map((item) => {
-                                return (
-                                    <li key={item.name} className="nav-item">
-                                        <Link
-                                            href={item.link}
-                                            className="nav-links"
-                                            onClick={open ? handleOpen : null}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                        <div className="nav-icon" onClick={handleOpen}>
-                            {open ? (
-                                <FontAwesomeIcon icon={faTimes} />
-                            ) : (
-                                <FontAwesomeIcon icon={faBars} />
-                            )}
-                        </div>
+                    <ul className={open ? "nav-menu active" : "nav-menu"}>
+                        {navLinks.map((item) => {
+                            return (
+                                <li key={item.name} className="nav-item">
+                                    <Link
+                                        href={item.link}
+                                        className="nav-links"
+                                        onClick={open ? handleOpen : null}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                    <div className="nav-icon" onClick={handleOpen}>
+                        {open ? <CloseOutlined /> : <MenuOutlined />}
                     </div>
                 </div>
             </nav>

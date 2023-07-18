@@ -3,7 +3,7 @@ import { Nanum_Myeongjo, Barlow_Semi_Condensed } from "next/font/google";
 export const nanumMyeongjo = Nanum_Myeongjo({
     subsets: ["latin"],
     weight: ["400", "700", "800"],
-    variable: "--font-nanum-myeongjo",
+    variable: "--font-nanum",
 });
 
 export const barlowSemiCondensed = Barlow_Semi_Condensed({
