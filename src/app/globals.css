@@ -8,8 +8,8 @@
 }
 
 .navbar {
-    background-color: #1f5156;
-    height: 64px;
+    background-color: #98B6BC;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,18 +24,17 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 64px;
-    /* max-width: 1500px; */
+    height: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .nav-logo {
     color: #fff;
     align-items: center;
-    margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
-    flex-grow: 1;
+    font-size: 1.5rem;
 }
 
 .nav-menu {
@@ -83,14 +82,14 @@
         width: 100%;
         border-top: 1px solid #fff;
         position: absolute;
-        top: 64px;
+        top: 60px;
         left: -110%;
         opacity: 1;
         transition: all 0.5s ease;
     }
 
     .nav-menu.active {
-        background: #1f5156;
+        background: #98B6BC;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -117,5 +116,5 @@
 }
 
 .font-barlow {
-    font-family: var(--font-barlow), serif;
+    font-family: var(--font-barlow), sans-serif;
 }

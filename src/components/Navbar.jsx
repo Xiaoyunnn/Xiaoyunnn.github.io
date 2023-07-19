@@ -3,10 +3,22 @@ import { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import {CloseOutlined, GithubOutlined, LinkedinOutlined, MenuOutlined} from "@ant-design/icons";
+import MoonIcon from "@/components/MoonIcon";
+import SunIcon from "@/components/SunIcon";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+        if (darkMode) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    }
 
     const handleOpen = () => setOpen(!open);
     const Close = () => setOpen(false);
@@ -44,6 +56,12 @@ const Navbar = () => {
                             );
                         })}
                     </ul>
+                    <div className="grid grid-cols-3 gap-3 items-center">
+                        <LinkedinOutlined className="text-white text-xl leading-none"/>
+                        <GithubOutlined className="text-white text-xl leading-none"/>
+                        {darkMode ? <SunIcon toggleDarkMode={toggleDarkMode}/> : <MoonIcon toggleDarkMode={toggleDarkMode}/>}
+
+                    </div>
                     <div className="nav-icon" onClick={handleOpen}>
                         {open ? <CloseOutlined /> : <MenuOutlined />}
                     </div>
