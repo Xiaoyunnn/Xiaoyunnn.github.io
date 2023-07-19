@@ -1,9 +1,7 @@
 'use client'
 import {aboutMeDescription, titles} from "@/utils";
 import Image from "next/image";
-import Link from "next/link";
 import {openInNewTab} from "@/utils/common";
-import bg from "@/app/bg2.jpg";
 
 const About = () => {
     return (
