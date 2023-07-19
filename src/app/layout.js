@@ -1,6 +1,6 @@
 import "./globals.css";
-import { nanumMyeongjo, barlowSemiCondensed } from "./font.js";
-import Navbar from "@/components/Navbar";
+import {nanumMyeongjo, barlowSemiCondensed, playFairDisplay} from "./font.js";
+import Navbar from "@/components/navbar/Navbar";
 
 export const metadata = {
     title: "Xiao Yun",
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             {/* <body className={nanumMyeongjo.className}>{children}</body> */}
             <body
-                className={`${nanumMyeongjo.variable} ${barlowSemiCondensed.variable}`}
+                className={`${nanumMyeongjo.variable} ${barlowSemiCondensed.variable} ${playFairDisplay.variable}`}
             >
                 <Navbar />
                 {children}
