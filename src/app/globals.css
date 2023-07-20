@@ -28,8 +28,8 @@ html {
     font-family: var(--font-playfair), serif;
 }
 
-.banner-height {
-    height: 100vh;
+.contact-height {
+    max-height: calc(100vh - 150px);
 }
 
 .heading-hi {

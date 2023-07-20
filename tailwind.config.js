@@ -9,7 +9,7 @@ module.exports = {
         extend: {
             colors: {
                 primary: {
-                    200: "#F3F6F7",
+                    200: "#ecf0f1",
                     300: "#DAE4E7",
                     400: "#C1D3D7",
                     500: "#98b7bf",
@@ -23,6 +23,18 @@ module.exports = {
                 },
                 white: "white",
                 transparent: "transparent",
+                yellow: {
+                    light: "#EADAB5",
+                    DEFAULT: "#EADAB5",
+                    dark: "#EADAB5",
+                },
+                danger: {
+                    300: "#FBEFEF",
+                    400: "#F9DAD9",
+                    500: "#EFBEBE",
+                    600: "#d07575",
+                    700: "#D55D5D",
+                },
             },
         },
     },

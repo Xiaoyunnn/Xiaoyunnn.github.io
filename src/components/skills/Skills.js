@@ -9,11 +9,11 @@ const Skills = () => {
 
     return (
         <div className="pt-16" id="skills">
-            <h1 className="text-4xl font-extrabold font-nanum text-secondary-700 mb-3">
+            <h1 className="font-nanum mb-3 text-4xl font-extrabold text-secondary-700">
                 {titles.skills}
             </h1>
             <div className="mb-2">
-                <p className="mb-2 font-barlow text-primary-700">
+                <p className="font-barlow mb-2 text-lg text-primary-700">
                     I&apos;m familiar with...
                 </p>
                 <div className="grid grid-cols-10 items-baseline">
@@ -28,7 +28,7 @@ const Skills = () => {
                 </div>
             </div>
             <div>
-                <p className="mb-2 font-barlow text-primary-700">
+                <p className="font-barlow mb-2 text-lg text-primary-700">
                     I&apos;ve played around with...
                 </p>
                 <div className="grid grid-cols-10 items-baseline">

@@ -4,7 +4,7 @@ const Top = () => {
     return (
         <div>
             <div className="relative">
-                <div className="w-screen relative banner-height">
+                <div className="relative h-screen w-screen">
                     <Image
                         alt="Hi"
                         src="/bg2.jpg"

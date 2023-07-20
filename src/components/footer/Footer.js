@@ -5,16 +5,16 @@ import { githubLink, linkedinLink } from "@/utils";
 
 const Footer = () => {
     return (
-        <div className="bg-primary-700 py-6 text-white flex items-center justify-between font-nanum px-[10%] font-extrabold">
+        <div className="font-nanum flex items-center justify-between bg-primary-700 px-[10%] py-6 font-extrabold text-white">
             <div />
             <span>Xiao Yun © 2023 </span>
-            <div className="grid grid-cols-2 gap-3 items-center">
+            <div className="grid grid-cols-2 items-center gap-3">
                 <LinkedinOutlined
-                    className="text-white text-xl leading-none cursor-pointer"
+                    className="cursor-pointer text-xl leading-none text-white"
                     onClick={() => openInNewTab(linkedinLink)}
                 />
                 <GithubOutlined
-                    className="text-white text-xl leading-none cursor-pointer"
+                    className="cursor-pointer text-xl leading-none text-white"
                     onClick={() => openInNewTab(githubLink)}
                 />
             </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 const TechLogo = ({ skill, hoverText, setHoverText, sm }) => {
     return (
         <div
-            className="w-16 h-18 relative flex flex-col items-center"
+            className="h-18 relative flex w-16 flex-col items-center"
             onMouseEnter={() => setHoverText(skill.name)}
             onMouseLeave={() => setHoverText("")}
         >
@@ -22,7 +22,7 @@ const TechLogo = ({ skill, hoverText, setHoverText, sm }) => {
                 }}
             />
             <p
-                className={`text-sm text-center text-primary-700 mt-1.5 transition-opacity ease-in-out ${
+                className={`mt-1.5 text-center text-sm text-primary-700 transition-opacity ease-in-out ${
                     hoverText === skill.name ? "opacity-100" : "opacity-0"
                 }`}
             >

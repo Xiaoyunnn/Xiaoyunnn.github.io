@@ -74,13 +74,13 @@ const Navbar = () => {
                             );
                         })}
                     </ul>
-                    <div className="grid grid-cols-3 gap-3 items-center">
+                    <div className="grid grid-cols-3 items-center gap-3">
                         <LinkedinOutlined
-                            className="text-white text-xl leading-none cursor-pointer"
+                            className="cursor-pointer text-xl leading-none text-white"
                             onClick={() => openInNewTab(linkedinLink)}
                         />
                         <GithubOutlined
-                            className="text-white text-xl leading-none cursor-pointer"
+                            className="cursor-pointer text-xl leading-none text-white"
                             onClick={() => openInNewTab(githubLink)}
                         />
                         {darkMode ? (

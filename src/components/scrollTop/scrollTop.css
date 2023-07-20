@@ -7,7 +7,7 @@
     z-index: 999;
     border: none;
     outline: none;
-    background-color: #c1d3d7;
+    background-color: #dae4e7;
     color: #65797d;
     cursor: pointer;
     border-radius: 50%;
@@ -20,5 +20,5 @@
 }
 
 #scrollTop:hover {
-    background-color: #abc2c7;
+    background-color: #cdd9dc;
 }

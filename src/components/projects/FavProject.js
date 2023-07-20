@@ -8,9 +8,9 @@ const FavProject = ({ project }) => {
     const [hoverText, setHoverText] = useState("");
 
     return (
-        <div className="flex items-stretch justify-between mb-12">
+        <div className="mb-12 flex items-stretch justify-between">
             <div className="relative">
-                <div className="w-[20vw] h-full relative">
+                <div className="relative h-full w-[20vw]">
                     <Image
                         alt={project.title}
                         src={project.img}
@@ -22,10 +22,10 @@ const FavProject = ({ project }) => {
                     />
                 </div>
             </div>
-            <div className="md:ml-8 sm:ml-8 font-barlow">
-                <div className="flex items-center mb-2">
+            <div className="font-barlow sm:ml-8 md:ml-8">
+                <div className="mb-2 flex items-center">
                     <p
-                        className={`text-3xl font-semibold text-primary-700 whitespace-pre-wrap mr-2 ${
+                        className={`mr-2 whitespace-pre-wrap text-3xl font-semibold text-primary-700 ${
                             project.demoLink ? "cursor-pointer" : ""
                         }`}
                         onClick={
@@ -37,12 +37,12 @@ const FavProject = ({ project }) => {
                         {project.title}
                     </p>
                     <GithubOutlined
-                        className="text-primary-700 text-2xl leading-none cursor-pointer"
+                        className="cursor-pointer text-2xl leading-none text-primary-700"
                         onClick={() => openInNewTab(project.githubLink)}
                     />
                 </div>
                 <p className="text-primary-800">{project.description}</p>
-                <div className="flex flex-wrap mt-2 items-baseline gap-2">
+                <div className="mt-2 flex flex-wrap items-baseline gap-2">
                     {project.techStack.map((tech) => (
                         <TechLogo
                             key={tech.name}

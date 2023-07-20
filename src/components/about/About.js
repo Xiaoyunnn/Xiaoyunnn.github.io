@@ -6,9 +6,9 @@ import { openInNewTab } from "@/utils/common";
 const About = () => {
     return (
         <div className="flex items-stretch justify-between py-16" id="about">
-            <div className="relative pt-14 pl-14">
-                <div className="w-[150px] h-[150px] bg-primary-300 absolute top-1 left-0" />
-                <div className="w-[20vw] h-full relative z-10">
+            <div className="relative pl-14 pt-14">
+                <div className="absolute left-0 top-1 h-[150px] w-[150px] bg-primary-300" />
+                <div className="relative z-10 h-full w-[20vw]">
                     <Image
                         alt="Hi"
                         src="/bg2.jpg"
@@ -19,16 +19,16 @@ const About = () => {
                     />
                 </div>
             </div>
-            <div className="mt-16 md:ml-14 sm:ml-10">
-                <h1 className="text-4xl font-extrabold font-nanum text-secondary-700 mb-3">
+            <div className="mt-16 sm:ml-10 md:ml-14">
+                <h1 className="font-nanum mb-3 text-4xl font-extrabold text-secondary-700">
                     {titles.about}
                 </h1>
-                <p className="text-base font-barlow text-primary-800 whitespace-pre-wrap mb-4">
+                <p className="font-barlow mb-4 whitespace-pre-wrap text-base text-primary-800">
                     {aboutMeDescription}
                 </p>
                 <button
                     onClick={() => openInNewTab("/WuXiaoYun_Resume.pdf")}
-                    className="btn hover:bg-primary-700 transition-colors ease-in-out"
+                    className="btn transition-colors ease-in-out hover:bg-primary-700"
                 >
                     Resume
                 </button>
