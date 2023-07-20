@@ -1,5 +1,3 @@
-export const sections = ["about", "skills", "experience", "projects", "contact"];
-
 export const navLinks = [
     { name: "about", link: "#about" },
     { name: "skills", link: "#skills" },
