@@ -5,7 +5,7 @@ import { openInNewTab } from "@/utils/common";
 
 const About = () => {
     return (
-        <div className="flex items-stretch justify-between my-16" id="about">
+        <div className="flex items-stretch justify-between py-16" id="about">
             <div className="relative pt-14 pl-14">
                 <div className="w-[150px] h-[150px] bg-primary-300 absolute top-1 left-0" />
                 <div className="w-[20vw] h-full relative z-10">

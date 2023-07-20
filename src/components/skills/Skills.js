@@ -8,7 +8,7 @@ const Skills = () => {
     const [hoverText, setHoverText] = useState("");
 
     return (
-        <div className="my-24" id="skills">
+        <div className="pt-16" id="skills">
             <h1 className="text-4xl font-extrabold font-nanum text-secondary-700 mb-3">
                 {titles.skills}
             </h1>
