@@ -180,7 +180,7 @@ export const experience = [
 export const projects = {
     favorites: [
         {
-            title: "Punkt",
+            title: "Punkt.",
             img: "/icons/punkt.png",
             demoLink: "https://punkt-orbital.netlify.app",
             githubLink: "https://github.com/angkoonhwee/Punkt-Milestone3",

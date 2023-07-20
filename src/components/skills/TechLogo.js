@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const TechLogo = ({skill, hoverText, setHoverText}) => {
+const TechLogo = ({skill, hoverText, setHoverText, sm}) => {
     return (
         <div
             className="w-16 h-18 relative flex flex-col items-center"
@@ -10,10 +10,10 @@ const TechLogo = ({skill, hoverText, setHoverText}) => {
             onMouseLeave={() => setHoverText("")}
         >
             <Image
-                alt="Hi"
+                alt={skill.name}
                 src={skill.path}
-                height={48}
-                width={48}
+                height={sm ? 40 : 48}
+                width={sm ? 40 : 48}
                 style={{
                     objectFit: "cover",
                     objectPosition: "bottom",
@@ -26,7 +26,7 @@ const TechLogo = ({skill, hoverText, setHoverText}) => {
                         : "opacity-0"
                 }`}
             >
-                                {skill.name}
+                {skill.name}
             </p>
         </div>
     );
