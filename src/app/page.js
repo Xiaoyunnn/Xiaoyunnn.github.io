@@ -9,18 +9,18 @@ import Contact from "@/components/contact/Contact";
 import ScrollTop from "@/components/scrollTop/ScrollTop";
 
 export default function Home() {
-  return (
-    <main>
-      <ScrollTop />
-      <Top />
-      <div className="mx-[12.5%]">
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
-      <Footer />
-    </main>
-  );
+    return (
+        <main>
+            <ScrollTop />
+            <Top />
+            <div className="mx-[12.5%]">
+                <About />
+                <Skills />
+                <Experience />
+                <Projects />
+                <Contact />
+            </div>
+            <Footer />
+        </main>
+    );
 }
