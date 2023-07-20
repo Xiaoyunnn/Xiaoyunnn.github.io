@@ -22,7 +22,10 @@ export default function ScrollTop() {
         });
     }
 
-    window.addEventListener("scroll", handleVisible);
+    if (typeof window !== "undefined") {
+        // browser code
+        window.addEventListener("scroll", handleVisible);
+    }
 
     return (
         <button

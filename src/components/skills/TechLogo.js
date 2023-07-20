@@ -12,11 +12,13 @@ const TechLogo = ({skill, hoverText, setHoverText, sm}) => {
             <Image
                 alt={skill.name}
                 src={skill.path}
-                height={sm ? 40 : 48}
-                width={sm ? 40 : 48}
+                height={48}
+                width={48}
                 style={{
-                    objectFit: "cover",
-                    objectPosition: "bottom",
+                    objectFit: "contain",
+                    objectPosition: "center",
+                    width: "100%",
+                    height: sm ? "40px" : "48px"
                 }}
             />
             <p

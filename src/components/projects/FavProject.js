@@ -8,7 +8,7 @@ const FavProject = ({project}) => {
     const [hoverText, setHoverText] = useState('');
 
     return (
-        <div className="flex items-stretch justify-between">
+        <div className="flex items-stretch justify-between mb-12">
             <div className="relative">
                 <div className="w-[20vw] h-full relative">
                     <Image
@@ -26,7 +26,7 @@ const FavProject = ({project}) => {
                 <div className="flex items-center mb-2">
                     <p
                         className={`text-3xl font-semibold text-primary-700 whitespace-pre-wrap mr-2 ${project.demoLink ? "cursor-pointer" : ""}`}
-                        onClick={() => openInNewTab(project.demoLink)}
+                        onClick={project.demoLink ? () => openInNewTab(project.demoLink) : null}
                     >
                         {project.title}
                     </p>
@@ -36,7 +36,7 @@ const FavProject = ({project}) => {
                     />
                 </div>
                 <p className="text-primary-800">{project.description}</p>
-                <div className="flex flex-wrap mt-2 items-center">
+                <div className="flex flex-wrap mt-2 items-baseline gap-2">
                     {project.techStack.map((tech) => (
                         <TechLogo key={tech.name} skill={tech} sm={true} hoverText={hoverText} setHoverText={setHoverText}/>
                     ))}

@@ -211,7 +211,7 @@ export const projects = {
         },
         {
             title: "Reisen",
-            img: "/icons/reisen.png",
+            img: "/icons/reisen-logo.png",
             demoLink: "https://drive.google.com/file/d/17xKyHZQK-Rqd3nSEV-8urGacpFHgoXqx/view?usp=sharing",
             githubLink: "https://github.com/angkoonhian/huawei-reisen",
             description: "This project achieved top 10 Finalist team project in Huawei Cloud Spark Hackathon 2022." +
@@ -220,7 +220,7 @@ export const projects = {
             techStack: [
                 {
                     name: "Huawei Cloud",
-                    path: "/icons/huawei-cloud.svg",
+                    path: "/icons/huawei-cloud.png",
                 },
                 {
                     name: "React Native",
