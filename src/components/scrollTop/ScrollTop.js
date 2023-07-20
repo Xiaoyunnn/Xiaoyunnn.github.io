@@ -1,39 +1,39 @@
-"use client"
+"use client";
 import "./scrollTop.css";
-import {useState} from "react";
-import {UpOutlined} from "@ant-design/icons";
+import { useState } from "react";
+import { UpOutlined } from "@ant-design/icons";
 
 export default function ScrollTop() {
-    const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-    function handleVisible() {
-        const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 300) {
-            setVisible(true);
-        } else if (scrolled <= 300) {
-            setVisible(false);
-        }
+  function handleVisible() {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisible(true);
+    } else if (scrolled <= 300) {
+      setVisible(false);
     }
+  }
 
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    }
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 
-    if (typeof window !== "undefined") {
-        // browser code
-        window.addEventListener("scroll", handleVisible);
-    }
+  if (typeof window !== "undefined") {
+    // browser code
+    window.addEventListener("scroll", handleVisible);
+  }
 
-    return (
-        <button
-            id="scrollTop"
-            style={{ display: visible ? "flex" : "none" }}
-            onClick={scrollToTop}
-        >
-            <UpOutlined />
-        </button>
-    );
+  return (
+    <button
+      id="scrollTop"
+      style={{ display: visible ? "flex" : "none" }}
+      onClick={scrollToTop}
+    >
+      <UpOutlined />
+    </button>
+  );
 }
