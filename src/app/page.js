@@ -7,12 +7,12 @@ import Skills from "@/components/skills/Skills";
 export default function Home() {
     return (
         <main>
-            <Top/>
+            <Top />
             <div className="mx-[10%]">
-                <About/>
-                <Skills/>
+                <About />
+                <Skills />
             </div>
-            <Footer/>
+            <Footer />
         </main>
     );
 }

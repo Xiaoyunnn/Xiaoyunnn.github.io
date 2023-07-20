@@ -7,9 +7,13 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ::selection {
-    background-color: #DAE4E7;
-    color: #3E5463;
+    background-color: #dae4e7;
+    color: #3e5463;
 }
 
 .font-nanum {
@@ -25,7 +29,7 @@
 }
 
 .banner-height {
-    height: 100vh
+    height: 100vh;
 }
 
 .heading-hi {
@@ -43,7 +47,7 @@
 .heading-name {
     font-size: 3.75rem;
     font-family: var(--font-nanum), serif;
-    color: #3E5463;
+    color: #3e5463;
     position: absolute;
     top: calc(50% - 25px);
     left: calc(50% - 170px);
@@ -51,14 +55,14 @@
 }
 
 .btn {
-    background-color: #849EA3;
+    background-color: #849ea3;
     color: white;
     padding: 0.5rem 1.5rem;
     font-family: var(--font-nanum), sans-serif;
 }
 
 .image-div {
-    background-image: url('https://unsplash.com/photos/bpxs4G38W8U');
+    background-image: url("https://unsplash.com/photos/bpxs4G38W8U");
     background-position: center;
     background-size: cover;
     width: 50%;

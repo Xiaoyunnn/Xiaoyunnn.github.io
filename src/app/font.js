@@ -1,4 +1,8 @@
-import {Nanum_Myeongjo, Barlow_Semi_Condensed, Playfair_Display} from "next/font/google";
+import {
+    Nanum_Myeongjo,
+    Barlow_Semi_Condensed,
+    Playfair_Display,
+} from "next/font/google";
 
 export const nanumMyeongjo = Nanum_Myeongjo({
     subsets: ["latin"],

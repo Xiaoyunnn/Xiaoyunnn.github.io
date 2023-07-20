@@ -1,5 +1,5 @@
 import "./globals.css";
-import {nanumMyeongjo, barlowSemiCondensed, playFairDisplay} from "./font.js";
+import { nanumMyeongjo, barlowSemiCondensed, playFairDisplay } from "./font.js";
 import Navbar from "@/components/navbar/Navbar";
 
 export const metadata = {
@@ -10,7 +10,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            {/* <body className={nanumMyeongjo.className}>{children}</body> */}
             <body
                 className={`${nanumMyeongjo.variable} ${barlowSemiCondensed.variable} ${playFairDisplay.variable}`}
             >
