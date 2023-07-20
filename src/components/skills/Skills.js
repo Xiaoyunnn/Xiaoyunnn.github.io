@@ -1,6 +1,5 @@
 "use client";
 import { skills, titles } from "@/utils";
-import Image from "next/image";
 import { useState } from "react";
 import TechLogo from "@/components/skills/TechLogo";
 

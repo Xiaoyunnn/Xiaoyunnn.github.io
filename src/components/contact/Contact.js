@@ -1,8 +1,6 @@
 import { titles } from "@/utils";
 import Image from "next/image";
-import { openInNewTab } from "@/utils/common";
 import { useState } from "react";
-import Modal from "@/components/modal/Modal";
 import FailureModal from "@/components/modal/FailureModal";
 import SuccessModal from "@/components/modal/SuccessModal";
 
