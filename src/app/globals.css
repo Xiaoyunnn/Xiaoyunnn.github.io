@@ -18,15 +18,18 @@ html {
 }
 
 .font-nanum {
-    font-family: var(--font-nanum), "Nanum Myeongjo", serif;
+    /*font-family: var(--font-nanum), "Nanum Myeongjo", serif;*/
+    font-family: "Nanum Myeongjo", serif;
 }
 
 .font-barlow {
-    font-family: var(--font-barlow), "Barlow Semi Condensed", sans-serif;
+    /*font-family: var(--font-barlow), "Barlow Semi Condensed", sans-serif;*/
+    font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 .font-playfair {
-    font-family: var(--font-playfair), "Playfair Display", serif;
+    /*font-family: var(--font-playfair), "Playfair Display", serif;*/
+    font-family: "Playfair Display", serif;
 }
 
 .contact-height {
@@ -35,7 +38,8 @@ html {
 
 .heading-hi {
     font-size: 20rem;
-    font-family: var(--font-playfair), "Playfair Display", serif;
+    /*font-family: var(--font-playfair), "Playfair Display", serif;*/
+    font-family: "Playfair Display", serif;
     color: white;
     opacity: 0.45;
     position: absolute;
@@ -47,11 +51,11 @@ html {
 
 .heading-name {
     font-size: 3.75rem;
-    font-family: var(--font-nanum), "Nanum Myeongjo", serif;
+    /*font-family: var(--font-nanum), "Nanum Myeongjo", serif;*/
+    font-family: "Nanum Myeongjo", serif;
     color: #3e5463;
     position: absolute;
     top: calc(50% - 25px);
-    /*left: calc(50% - 170px);*/
     line-height: 1;
     text-align: center;
     width: 100%;
@@ -60,7 +64,8 @@ html {
 .btn {
     color: white;
     padding: 0.5rem 1.5rem;
-    font-family: var(--font-nanum), "Nanum Myeongjo", sans-serif;
+    /*font-family: var(--font-nanum), "Nanum Myeongjo", sans-serif;*/
+    font-family: "Nanum Myeongjo", sans-serif;
 }
 
 .image-div {
