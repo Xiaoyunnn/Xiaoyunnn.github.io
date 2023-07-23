@@ -51,8 +51,10 @@ html {
     color: #3e5463;
     position: absolute;
     top: calc(50% - 25px);
-    left: calc(50% - 170px);
+    /*left: calc(50% - 170px);*/
     line-height: 1;
+    text-align: center;
+    width: 100%;
 }
 
 .btn {

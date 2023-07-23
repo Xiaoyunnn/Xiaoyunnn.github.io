@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Typewriter } from "react-simple-typewriter";
 
 const Top = () => {
     return (
@@ -16,7 +17,20 @@ const Top = () => {
                     />
                 </div>
                 <h1 className="heading-hi">Hi</h1>
-                <h2 className="heading-name">I&rsquo;m Xiao Yun</h2>
+                <h2 className="heading-name">
+                    I
+                    <Typewriter
+                        words={["'m Xiao Yun", " design", " code"]}
+                        loop={0}
+                        cursor
+                        // cursorStyle='_'
+                        typeSpeed={120}
+                        deleteSpeed={70}
+                        delaySpeed={1000}
+                        // onLoopDone={handleDone}
+                        // onType={handleType}
+                    />
+                </h2>
             </div>
         </div>
     );
