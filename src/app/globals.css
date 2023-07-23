@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,15 +18,15 @@ html {
 }
 
 .font-nanum {
-    font-family: var(--font-nanum), serif;
+    font-family: var(--font-nanum), "Nanum Myeongjo", serif;
 }
 
 .font-barlow {
-    font-family: var(--font-barlow), sans-serif;
+    font-family: var(--font-barlow), "Barlow Semi Condensed", sans-serif;
 }
 
 .font-playfair {
-    font-family: var(--font-playfair), serif;
+    font-family: var(--font-playfair), "Playfair Display", serif;
 }
 
 .contact-height {
@@ -34,7 +35,7 @@ html {
 
 .heading-hi {
     font-size: 20rem;
-    font-family: var(--font-playfair), serif;
+    font-family: var(--font-playfair), "Playfair Display", serif;
     color: white;
     opacity: 0.45;
     position: absolute;
@@ -46,7 +47,7 @@ html {
 
 .heading-name {
     font-size: 3.75rem;
-    font-family: var(--font-nanum), serif;
+    font-family: var(--font-nanum), "Nanum Myeongjo", serif;
     color: #3e5463;
     position: absolute;
     top: calc(50% - 25px);
@@ -55,10 +56,9 @@ html {
 }
 
 .btn {
-    background-color: #849ea3;
     color: white;
     padding: 0.5rem 1.5rem;
-    font-family: var(--font-nanum), sans-serif;
+    font-family: var(--font-nanum), "Nanum Myeongjo", sans-serif;
 }
 
 .image-div {

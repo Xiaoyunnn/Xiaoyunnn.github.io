@@ -17,7 +17,7 @@ const TechLogo = ({ skill, hoverText, setHoverText, sm }) => {
                 style={{
                     objectFit: "contain",
                     objectPosition: "center",
-                    width: "100%",
+                    width: "auto",
                     height: sm ? "40px" : "48px",
                 }}
             />

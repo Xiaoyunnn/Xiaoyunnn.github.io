@@ -10,7 +10,7 @@ const OtherProject = ({ project }) => {
                 src={project.img}
                 height={250}
                 width={250}
-                className="w-full object-cover object-top md:h-[250px]"
+                className="w-auto object-cover object-top md:h-[250px]"
             />
             <div className="mb-1 mt-3 flex flex-wrap items-center">
                 <p
@@ -34,7 +34,7 @@ const OtherProject = ({ project }) => {
             <div className="flex flex-wrap">
                 {project.techStack.map((tech) => (
                     <span
-                        key={tech}
+                        key={`${project.title}-${tech}`}
                         className="mr-2 font-medium text-yellow-light"
                     >
                         {tech}

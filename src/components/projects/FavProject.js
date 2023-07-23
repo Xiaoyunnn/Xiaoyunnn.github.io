@@ -15,6 +15,7 @@ const FavProject = ({ project }) => {
                         alt={project.title}
                         src={project.img}
                         fill={true}
+                        sizes={"100%"}
                         style={{
                             objectFit: "cover",
                             objectPosition: "center",
@@ -45,7 +46,7 @@ const FavProject = ({ project }) => {
                 <div className="mt-2 flex flex-wrap items-baseline gap-2">
                     {project.techStack.map((tech) => (
                         <TechLogo
-                            key={tech.name}
+                            key={`${project.title}-${tech.name}`}
                             skill={tech}
                             sm={true}
                             hoverText={hoverText}

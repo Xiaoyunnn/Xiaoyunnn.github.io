@@ -1,6 +1,6 @@
 "use client";
 import "./scrollTop.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UpOutlined } from "@ant-design/icons";
 
 export default function ScrollTop() {
@@ -22,10 +22,12 @@ export default function ScrollTop() {
         });
     }
 
-    if (typeof window !== "undefined") {
-        // browser code
-        window.addEventListener("scroll", handleVisible);
-    }
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            // browser code
+            window.addEventListener("scroll", handleVisible);
+        }
+    }, []);
 
     return (
         <button

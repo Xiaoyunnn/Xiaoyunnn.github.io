@@ -1,13 +1,12 @@
+"use client";
 import { titles } from "@/utils";
 import Image from "next/image";
 import { useState } from "react";
 import FailureModal from "@/components/modal/FailureModal";
 import SuccessModal from "@/components/modal/SuccessModal";
+import Spinner from "@/components/contact/Spinner";
 
 const Contact = () => {
-    // const [name, setName] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [message, setMessage] = useState("");
     const [enquiry, setEnquiry] = useState({
         name: "",
         email: "",
@@ -16,6 +15,7 @@ const Contact = () => {
     const [isOpenSuccess, setIsOpenSuccess] = useState(false);
     const [isOpenFailure, setIsOpenFailure] = useState(false);
     const [failureMessage, setFailureMessage] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     function handleChange(event) {
         const { name, value } = event.target;
@@ -27,8 +27,16 @@ const Contact = () => {
         });
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isSubmitting) {
+            setIsOpenFailure(true);
+            setFailureMessage(
+                "Please wait for the current submission to finish.",
+            );
+            return;
+        }
+        setIsSubmitting(true);
         const trimmedName = enquiry.name.trim();
         const trimmedEmail = enquiry.email.trim();
         const trimmedMessage = enquiry.message.trim();
@@ -42,8 +50,29 @@ const Contact = () => {
             setFailureMessage("Please enter a valid email address.");
             return;
         }
-        setIsOpenSuccess(true);
-        setEnquiry({ name: "", email: "", message: "" });
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: trimmedName,
+                    email: trimmedEmail,
+                    message: trimmedMessage,
+                }),
+            });
+
+            if (res.ok) {
+                setIsOpenSuccess(true);
+                setEnquiry({ name: "", email: "", message: "" });
+            }
+        } catch (error) {
+            setIsOpenFailure(true);
+            setFailureMessage("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -89,6 +118,7 @@ const Contact = () => {
                             required={true}
                             type="text"
                             id="name"
+                            name="name"
                             className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0"
                             placeholder="Enter your name"
                             value={enquiry.name}
@@ -106,6 +136,7 @@ const Contact = () => {
                             required={true}
                             type="email"
                             id="email"
+                            name="email"
                             className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0"
                             placeholder="Enter your email"
                             value={enquiry.email}
@@ -121,6 +152,7 @@ const Contact = () => {
                         </label>
                         <textarea
                             id="message"
+                            name="message"
                             rows={6}
                             required={true}
                             className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0"
@@ -129,12 +161,18 @@ const Contact = () => {
                             onChange={handleChange}
                         />
                     </div>
+
                     <button
                         onClick={handleSubmit}
+                        disabled={isSubmitting}
                         type="submit"
-                        className="btn transition-colors ease-in-out hover:bg-primary-700"
+                        className={`btn transition-colors ease-in-out ${
+                            isSubmitting
+                                ? "cursor-not-allowed" + " bg-primary-700"
+                                : "bg-primary-600 hover:bg-primary-700"
+                        }`}
                     >
-                        Send
+                        {isSubmitting ? <Spinner /> : "Send"}
                     </button>
                 </form>
             </div>
