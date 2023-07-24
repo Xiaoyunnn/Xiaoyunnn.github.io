@@ -2,47 +2,53 @@
 import { skills, titles } from "@/utils";
 import { useState } from "react";
 import TechLogo from "@/components/skills/TechLogo";
+import { styles } from "@/app/styles";
+import { SectionWrapper } from "@/hoc";
+import { textVariant } from "@/utils/motion";
+import { motion } from "framer-motion";
 
 const Skills = () => {
     const [hoverText, setHoverText] = useState("");
 
     return (
-        <div className="pt-16" id="skills">
-            <h1 className="font-nanum mb-3 text-4xl font-extrabold text-secondary-700">
-                {titles.skills}
-            </h1>
-            <div className="mb-2">
-                <p className="font-barlow mb-2 text-lg text-primary-700">
-                    I&apos;m familiar with...
-                </p>
-                <div className="grid grid-cols-10 items-baseline">
-                    {skills.familiar.map((skill) => (
-                        <TechLogo
-                            skill={skill}
-                            hoverText={hoverText}
-                            setHoverText={setHoverText}
-                            key={skill.name}
-                        />
-                    ))}
+        <>
+            <motion.div variants={textVariant()} className="pt-16">
+                <h1 className={styles.sectionHeadText}>{titles.skills}</h1>
+                <div className="mb-2">
+                    <p className={styles.sectionSubText}>
+                        I&apos;m familiar with...
+                    </p>
+                    <div className="grid grid-cols-10 items-baseline">
+                        {skills.familiar.map((skill, index) => (
+                            <TechLogo
+                                skill={skill}
+                                index={index}
+                                hoverText={hoverText}
+                                setHoverText={setHoverText}
+                                key={skill.name}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
-            <div>
-                <p className="font-barlow mb-2 text-lg text-primary-700">
-                    I&apos;ve played around with...
-                </p>
-                <div className="grid grid-cols-10 items-baseline">
-                    {skills.playedAround.map((skill) => (
-                        <TechLogo
-                            skill={skill}
-                            hoverText={hoverText}
-                            setHoverText={setHoverText}
-                            key={skill.name}
-                        />
-                    ))}
+                <div>
+                    <p className={styles.sectionSubText}>
+                        I&apos;ve played around with...
+                    </p>
+                    <div className="grid grid-cols-10 items-baseline">
+                        {skills.playedAround.map((skill, index) => (
+                            <TechLogo
+                                skill={skill}
+                                hoverText={hoverText}
+                                setHoverText={setHoverText}
+                                key={skill.name}
+                                index={index}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </>
     );
 };
 
-export default Skills;
+export default SectionWrapper(Skills, "skills");

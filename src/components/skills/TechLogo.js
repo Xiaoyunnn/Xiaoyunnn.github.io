@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
-const TechLogo = ({ skill, hoverText, setHoverText, sm }) => {
+const TechLogo = ({ skill, hoverText, setHoverText, sm, index }) => {
     return (
-        <div
+        <motion.div
+            variants={fadeIn("", "orchestration", index * 0.2, 0.75)}
             className="h-18 relative flex w-16 flex-col items-center"
             onMouseEnter={() => setHoverText(skill.name)}
             onMouseLeave={() => setHoverText("")}
@@ -28,7 +31,7 @@ const TechLogo = ({ skill, hoverText, setHoverText, sm }) => {
             >
                 {skill.name}
             </p>
-        </div>
+        </motion.div>
     );
 };
 

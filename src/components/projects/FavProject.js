@@ -3,12 +3,17 @@ import { GithubOutlined } from "@ant-design/icons";
 import { openInNewTab } from "@/utils/common";
 import TechLogo from "@/components/skills/TechLogo";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
-const FavProject = ({ project }) => {
+const FavProject = ({ project, index }) => {
     const [hoverText, setHoverText] = useState("");
 
     return (
-        <div className="mb-12 flex items-stretch justify-between">
+        <motion.div
+            variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+            className="mb-12 flex items-stretch justify-between"
+        >
             <div className="relative">
                 <div className="relative h-full w-[20vw]">
                     <Image
@@ -55,7 +60,7 @@ const FavProject = ({ project }) => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

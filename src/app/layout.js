@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body
                 className={`${nanumMyeongjo.variable} ${barlowSemiCondensed.variable} ${playFairDisplay.variable}`}
+                suppressHydrationWarning={true}
             >
                 <Navbar />
                 {children}

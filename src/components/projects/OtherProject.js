@@ -1,16 +1,21 @@
 import Image from "next/image";
 import { openInNewTab } from "@/utils/common";
 import { GithubOutlined } from "@ant-design/icons";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
-const OtherProject = ({ project }) => {
+const OtherProject = ({ project, index }) => {
     return (
-        <div className="font-barlow h-full bg-primary-700 p-4">
+        <motion.div
+            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+            className="font-barlow h-full bg-primary-700 p-4"
+        >
             <Image
                 alt={project.title}
                 src={project.img}
                 height={250}
                 width={250}
-                className="w-auto object-cover object-top md:h-[250px]"
+                className="w-full object-cover object-top md:h-[250px]"
             />
             <div className="mb-1 mt-3 flex flex-wrap items-center">
                 <p
@@ -41,7 +46,7 @@ const OtherProject = ({ project }) => {
                     </span>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

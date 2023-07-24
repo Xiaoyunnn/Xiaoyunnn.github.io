@@ -62,14 +62,13 @@ const Navbar = () => {
                         {navLinks.map((item) => {
                             return (
                                 <li key={item.name} className="nav-item">
-                                    <Link
+                                    <a
                                         href={item.link}
-                                        scroll={false}
                                         className="nav-links"
                                         onClick={() => handleOpen(item.name)}
                                     >
                                         {item.name}
-                                    </Link>
+                                    </a>
                                 </li>
                             );
                         })}

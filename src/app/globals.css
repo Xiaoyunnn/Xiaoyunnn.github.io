@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* {
-    margin: 0;
-    padding: 0;
-}
 
 html {
     scroll-behavior: smooth;
@@ -18,17 +14,14 @@ html {
 }
 
 .font-nanum {
-    /*font-family: var(--font-nanum), "Nanum Myeongjo", serif;*/
     font-family: "Nanum Myeongjo", serif;
 }
 
 .font-barlow {
-    /*font-family: var(--font-barlow), "Barlow Semi Condensed", sans-serif;*/
     font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 .font-playfair {
-    /*font-family: var(--font-playfair), "Playfair Display", serif;*/
     font-family: "Playfair Display", serif;
 }
 
@@ -38,7 +31,6 @@ html {
 
 .heading-hi {
     font-size: 20rem;
-    /*font-family: var(--font-playfair), "Playfair Display", serif;*/
     font-family: "Playfair Display", serif;
     color: white;
     opacity: 0.45;
@@ -51,7 +43,6 @@ html {
 
 .heading-name {
     font-size: 3.75rem;
-    /*font-family: var(--font-nanum), "Nanum Myeongjo", serif;*/
     font-family: "Nanum Myeongjo", serif;
     color: #3e5463;
     position: absolute;
@@ -64,7 +55,6 @@ html {
 .btn {
     color: white;
     padding: 0.5rem 1.5rem;
-    /*font-family: var(--font-nanum), "Nanum Myeongjo", sans-serif;*/
     font-family: "Nanum Myeongjo", sans-serif;
 }
 
@@ -73,4 +63,10 @@ html {
     background-position: center;
     background-size: cover;
     width: 50%;
+}
+
+.hash-span {
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+    display: block;
 }
