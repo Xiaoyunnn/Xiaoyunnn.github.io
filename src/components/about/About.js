@@ -11,12 +11,12 @@ const About = () => {
     return (
         <>
             <motion.div
-                className="flex items-stretch justify-between py-16"
+                className="flex items-stretch justify-between py-16 sm:flex-col md:flex-row"
                 variants={textVariant()}
             >
-                <div className="relative pl-14 pt-14">
-                    <div className="absolute left-0 top-1 h-[150px] w-[150px] bg-primary-300" />
-                    <div className="relative z-10 h-full w-[20vw]">
+                <div className="relative sm:p-0 md:pl-14 md:pt-14">
+                    <div className="absolute top-1 bg-primary-300 xs:left-1/3 sm:h-[100px] sm:w-[100px] md:left-0 md:h-[150px] md:w-[150px]" />
+                    <div className="relative z-10 w-[20vw] sm:m-auto sm:h-[30vw] md:h-full">
                         <Image
                             alt="Hi"
                             src="/bg2.jpg"
@@ -27,7 +27,7 @@ const About = () => {
                         />
                     </div>
                 </div>
-                <div className="mt-16 sm:ml-10 md:ml-14">
+                <div className="mt-16 md:ml-14">
                     <h1 className={styles.sectionHeadText}>{titles.about}</h1>
                     <p className="font-barlow mb-4 whitespace-pre-wrap text-base text-primary-800">
                         {aboutMeDescription}

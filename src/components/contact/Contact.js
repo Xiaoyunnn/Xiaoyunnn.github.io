@@ -100,8 +100,8 @@ const Contact = () => {
                 <h1 className="font-nanum mb-7 text-4xl font-extrabold text-secondary-700">
                     {titles.contact}
                 </h1>
-                <div className="flex">
-                    <div className="contact-height w-1/2">
+                <div className="flex flex-col sm:flex-row">
+                    <div className="contact-height h-[300px] w-full sm:w-1/2">
                         <Image
                             src={"/contact-light.jpg"}
                             alt={"contact"}
@@ -111,7 +111,7 @@ const Contact = () => {
                         />
                     </div>
                     <form
-                        className="font-nanum w-1/2 border-y-[1px] border-r-[1px] px-12 py-[10%]"
+                        className="font-nanum w-full border-[1px] px-6 py-[10%] sm:w-1/2 sm:px-12"
                         onSubmit={handleSubmit}
                     >
                         <div className="mb-4 flex flex-col">

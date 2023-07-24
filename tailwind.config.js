@@ -6,7 +6,15 @@ module.exports = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/hoc/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+    darkMode: "class",
     theme: {
+        screens: {
+            xs: "500px",
+            sm: "640px",
+            md: "955px",
+            lg: "1024px",
+            xl: "1280px",
+        },
         extend: {
             colors: {
                 primary: {

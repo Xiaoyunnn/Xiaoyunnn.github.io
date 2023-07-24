@@ -13,7 +13,7 @@ export default function Home() {
         <main>
             <ScrollTop />
             <Top />
-            <div className="mx-[12.5%]">
+            <div className="mx-[7.5%] sm:mx-[12.5%]">
                 <About />
                 <Skills />
                 <Experience />

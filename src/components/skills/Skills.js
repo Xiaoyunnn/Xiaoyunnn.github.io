@@ -18,7 +18,7 @@ const Skills = () => {
                     <p className={styles.sectionSubText}>
                         I&apos;m familiar with...
                     </p>
-                    <div className="grid grid-cols-10 items-baseline">
+                    <div className="grid grid-cols-5 items-baseline md:grid-cols-10">
                         {skills.familiar.map((skill, index) => (
                             <TechLogo
                                 skill={skill}
@@ -34,7 +34,7 @@ const Skills = () => {
                     <p className={styles.sectionSubText}>
                         I&apos;ve played around with...
                     </p>
-                    <div className="grid grid-cols-10 items-baseline">
+                    <div className="grid grid-cols-5 items-baseline md:grid-cols-10">
                         {skills.playedAround.map((skill, index) => (
                             <TechLogo
                                 skill={skill}

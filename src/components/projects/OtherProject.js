@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { openInNewTab } from "@/utils/common";
-import { GithubOutlined } from "@ant-design/icons";
+import { GithubOutlined, YoutubeOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 
@@ -18,22 +18,19 @@ const OtherProject = ({ project, index }) => {
                 className="w-full object-cover object-top md:h-[250px]"
             />
             <div className="mb-1 mt-3 flex flex-wrap items-center">
-                <p
-                    className={`mr-2 text-xl font-semibold text-primary-200 ${
-                        project.demoLink && "cursor-pointer"
-                    }`}
-                    onClick={
-                        project.demoLink
-                            ? () => openInNewTab(project.demoLink)
-                            : null
-                    }
-                >
+                <p className={`mr-2 text-xl font-semibold text-primary-200`}>
                     {project.title}
                 </p>
                 <GithubOutlined
                     className="cursor-pointer text-lg leading-none text-primary-200"
                     onClick={() => openInNewTab(project.githubLink)}
                 />
+                {project.demoLink && (
+                    <YoutubeOutlined
+                        className="ml-2 cursor-pointer text-2xl leading-none text-white"
+                        onClick={() => openInNewTab(project.demoLink)}
+                    />
+                )}
             </div>
             <p className="text-primary-300">{project.description}</p>
             <div className="flex flex-wrap">

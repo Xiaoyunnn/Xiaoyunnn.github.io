@@ -8,7 +8,7 @@ const TechLogo = ({ skill, hoverText, setHoverText, sm, index }) => {
     return (
         <motion.div
             variants={fadeIn("", "orchestration", index * 0.2, 0.75)}
-            className="h-18 relative flex w-16 flex-col items-center"
+            className="h-18 relative mb-1 flex w-16 flex-col items-center"
             onMouseEnter={() => setHoverText(skill.name)}
             onMouseLeave={() => setHoverText("")}
         >

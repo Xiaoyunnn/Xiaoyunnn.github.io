@@ -236,7 +236,7 @@ export const projects = {
             ],
         },
         {
-            title: "Tuition Address Book (TAB)",
+            title: "Tuition Address Book",
             img: "/svg-logos/tab.svg",
             githubLink: "https://github.com/AY2122S1-CS2103T-F13-3/tp",
             description:

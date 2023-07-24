@@ -25,7 +25,7 @@ const Projects = () => {
                     ))}
                 </div>
                 <p className={styles.sectionSubText}>Other projects...</p>
-                <div className="grid grid-cols-3 items-start gap-7">
+                <div className="grid grid-cols-1 items-start gap-7 sm:grid-cols-2 md:grid-cols-3">
                     {projects.others.map((project, index) => (
                         <OtherProject
                             key={project.title}
