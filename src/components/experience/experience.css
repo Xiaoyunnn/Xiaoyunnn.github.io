@@ -1,0 +1,26 @@
+.vertical-timeline {
+    width: 100%;
+    margin: 0;
+}
+.vertical-timeline
+    .vertical-timeline-element
+    .vertical-timeline-element-content {
+    padding: 0;
+    box-shadow: unset;
+}
+
+.vertical-timeline .vertical-timeline-element .vertical-timeline-element-icon {
+    box-shadow: 0 0 0 3px #c1d3d7;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date,
+.vertical-timeline-element-content p {
+    font-size: 1rem;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    padding: 0.4rem 0;
+    opacity: 0.85;
+}

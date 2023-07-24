@@ -101,7 +101,7 @@ export const skills = {
     ],
 };
 
-export const experience = [
+export const experiences = [
     {
         title: "Summer Analyst (Software Engineer)",
         company: "Goldman Sachs",

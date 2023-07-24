@@ -25,7 +25,7 @@ const TechLogo = ({ skill, hoverText, setHoverText, sm, index }) => {
                 }}
             />
             <p
-                className={`mt-1.5 text-center text-sm text-primary-700 transition-opacity ease-in-out ${
+                className={`hover-text ${
                     hoverText === skill.name ? "opacity-100" : "opacity-0"
                 }`}
             >
