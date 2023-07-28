@@ -8,8 +8,13 @@ import Spinner from "@/components/contact/Spinner";
 import { SectionWrapper } from "@/hoc";
 import { motion } from "framer-motion";
 import { slideIn, textVariant } from "@/utils/motion";
+import { styles } from "@/app/styles";
 
 const Contact = () => {
+    const darkMode =
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
     const [enquiry, setEnquiry] = useState({
         name: "",
         email: "",
@@ -97,27 +102,31 @@ const Contact = () => {
                         onClose={() => setIsOpenSuccess(false)}
                     />
                 )}
-                <h1 className="font-nanum mb-7 text-4xl font-extrabold text-secondary-700">
-                    {titles.contact}
-                </h1>
+                <h1 className={styles.sectionHeadText}>{titles.contact}</h1>
                 <div className="flex flex-col sm:flex-row">
                     <div className="contact-height w-full sm:w-1/2">
                         <Image
-                            src={"/contact-light.jpg"}
+                            src={
+                                darkMode
+                                    ? "/contact-dark.png"
+                                    : "/contact-light.jpg"
+                            }
                             alt={"contact"}
                             width={400}
                             height={400}
-                            className="h-full w-full object-cover"
+                            className={`h-full w-full object-cover ${
+                                darkMode ? "object-bottom" : "object-center"
+                            }`}
                         />
                     </div>
                     <form
-                        className="font-nanum w-full border-[1px] px-6 py-[10%] sm:w-1/2 sm:px-12"
+                        className="font-nanum w-full border-[1px] px-6 py-[10%] dark:border-0 dark:bg-primary-800 sm:w-1/2 sm:px-12"
                         onSubmit={handleSubmit}
                     >
                         <div className="mb-4 flex flex-col">
                             <label
                                 htmlFor="name"
-                                className="font-nanum mb-2 text-sm text-primary-700"
+                                className="font-nanum mb-2 text-sm text-primary-700 dark:text-primary-600"
                             >
                                 Name
                             </label>
@@ -126,7 +135,7 @@ const Contact = () => {
                                 type="text"
                                 id="name"
                                 name="name"
-                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0"
+                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
                                 placeholder="Enter your name"
                                 value={enquiry.name}
                                 onChange={handleChange}
@@ -135,7 +144,7 @@ const Contact = () => {
                         <div className="mb-4 flex flex-col">
                             <label
                                 htmlFor="email"
-                                className="font-nanum mb-2 text-sm text-primary-700"
+                                className="font-nanum mb-2 text-sm text-primary-700 dark:text-primary-600"
                             >
                                 Email
                             </label>
@@ -144,7 +153,7 @@ const Contact = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0"
+                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
                                 placeholder="Enter your email"
                                 value={enquiry.email}
                                 onChange={handleChange}
@@ -153,7 +162,7 @@ const Contact = () => {
                         <div className="mb-4 flex flex-col">
                             <label
                                 htmlFor="message"
-                                className="font-nanum mb-2 text-sm text-primary-700"
+                                className="font-nanum mb-2 text-sm text-primary-700 dark:text-primary-600"
                             >
                                 Message
                             </label>
@@ -162,7 +171,7 @@ const Contact = () => {
                                 name="message"
                                 rows={6}
                                 required={true}
-                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0"
+                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
                                 placeholder="Leave your message here..."
                                 value={enquiry.message}
                                 onChange={handleChange}
@@ -175,8 +184,9 @@ const Contact = () => {
                             type="submit"
                             className={`btn transition-colors ease-in-out ${
                                 isSubmitting
-                                    ? "cursor-not-allowed" + " bg-primary-700"
-                                    : "bg-primary-600 hover:bg-primary-700"
+                                    ? "cursor-not-allowed bg-primary-700 dark:bg-primary-750"
+                                    : "bg-primary-600 hover:bg-primary-700 dark:bg-primary-700" +
+                                      " dark:hover:bg-primary-750"
                             }`}
                         >
                             {isSubmitting ? <Spinner /> : "Send"}

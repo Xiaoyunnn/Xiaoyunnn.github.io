@@ -2,6 +2,10 @@
     width: 100%;
     margin: 0;
 }
+
+.vertical-timeline::before {
+    background: #c1d3d7;
+}
 .vertical-timeline
     .vertical-timeline-element
     .vertical-timeline-element-content {
@@ -22,4 +26,8 @@
 
 .vertical-timeline-element-content .vertical-timeline-element-date {
     opacity: 0.85;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-content-arrow {
+    border-right: transparent;
 }

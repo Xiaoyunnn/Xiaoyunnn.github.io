@@ -5,12 +5,25 @@ import { useState } from "react";
 
 const ExperienceCard = ({ experience }) => {
     const [hoverText, setHoverText] = useState("");
+    const darkMode =
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
 
     return (
         <VerticalTimelineElement
             date={experience.date}
-            dateClassName={"text-primary-700 py-2"}
+            dateClassName={
+                darkMode ? "text-primary-300 py-2" : "text-primary-700 py-2"
+            }
             iconStyle={{ background: "#fff" }}
+            contentStyle={
+                darkMode
+                    ? {
+                          background: "#19262d",
+                      }
+                    : { background: "#fff" }
+            }
             icon={
                 <div className="flex h-full w-full items-center justify-center">
                     <Image
@@ -24,18 +37,18 @@ const ExperienceCard = ({ experience }) => {
             }
         >
             <div>
-                <h3 className="font-barlow text-2xl font-bold text-primary-700">
+                <h3 className="font-barlow text-2xl font-bold text-primary-700 dark:text-primary-400">
                     {experience.title}
                 </h3>
                 <p
-                    className="font-barlow text-base font-normal text-primary-700"
+                    className="font-barlow text-base font-normal text-primary-700 dark:text-primary-400"
                     style={{ margin: "5px 0", fontWeight: "400" }}
                 >
                     {experience.company}
                 </p>
             </div>
 
-            <ul className="font-barlow ml-5 list-disc text-primary-800">
+            <ul className="font-barlow ml-5 list-disc text-primary-800 dark:text-primary-500">
                 {experience.description.map((point, index) => (
                     <li key={`experience-${experience.company}-${index}`}>
                         {point}

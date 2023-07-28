@@ -18,7 +18,7 @@ const Experience = () => {
             <motion.div variants={textVariant()} className="py-16">
                 <h1 className={styles.sectionHeadText}>{titles.experience}</h1>
                 <div className="flex flex-col">
-                    <VerticalTimeline lineColor={"#C1D3D7"}>
+                    <VerticalTimeline>
                         {experiences.map((experience, index) => (
                             <ExperienceCard
                                 key={`experience-${index}`}

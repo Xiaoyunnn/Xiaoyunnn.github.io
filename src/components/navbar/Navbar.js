@@ -1,6 +1,6 @@
 "use client";
 import "./navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
     CloseOutlined,
@@ -13,18 +13,8 @@ import SunIcon from "@/components/icons/SunIcon";
 import { githubLink, linkedinLink, navLinks } from "@/utils";
 import { openInNewTab } from "@/utils/common";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
     const [open, setOpen] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
-
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        if (darkMode) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    };
 
     const handleOpen = (elementId) => {
         setOpen(!open);
@@ -83,9 +73,13 @@ const Navbar = () => {
                             onClick={() => openInNewTab(githubLink)}
                         />
                         {darkMode ? (
-                            <SunIcon toggleDarkMode={toggleDarkMode} />
+                            <SunIcon
+                                toggleDarkMode={() => toggleDarkMode(false)}
+                            />
                         ) : (
-                            <MoonIcon toggleDarkMode={toggleDarkMode} />
+                            <MoonIcon
+                                toggleDarkMode={() => toggleDarkMode(true)}
+                            />
                         )}
                     </div>
                     <div className="nav-icon" onClick={() => handleOpen("")}>

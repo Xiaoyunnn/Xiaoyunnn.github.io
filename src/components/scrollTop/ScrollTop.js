@@ -32,10 +32,15 @@ export default function ScrollTop() {
             window.removeEventListener("scroll", handleVisible);
         };
     }, []);
+    /*
+        background-color: #dae4e7;
+    color: #65797d;
+     */
 
     return (
         <button
             id="scrollTop"
+            className="bg-primary-400 text-primary-700 dark:bg-primary-700 dark:text-primary-200"
             style={{ display: visible ? "flex" : "none" }}
             onClick={scrollToTop}
         >

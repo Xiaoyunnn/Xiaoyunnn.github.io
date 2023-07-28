@@ -31,12 +31,12 @@ const About = () => {
                 </div>
                 <div className="mt-16 md:ml-14">
                     <h1 className={styles.sectionHeadText}>{titles.about}</h1>
-                    <p className="font-barlow mb-4 whitespace-pre-wrap text-base text-primary-800">
+                    <p className="font-barlow mb-4 whitespace-pre-wrap text-base text-primary-800 dark:text-primary-400">
                         {aboutMeDescription}
                     </p>
                     <button
                         onClick={() => openInNewTab("/WuXiaoYun_Resume.pdf")}
-                        className="btn bg-primary-600 transition-colors ease-in-out hover:bg-primary-700"
+                        className="btn bg-primary-600 transition-colors ease-in-out hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-800"
                     >
                         Resume
                     </button>

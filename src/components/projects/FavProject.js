@@ -35,22 +35,24 @@ const FavProject = ({ project, index }) => {
             <div className="font-barlow mt-3 md:ml-8 md:mt-0">
                 <div className="mb-2 flex flex-wrap items-center">
                     <p
-                        className={`mr-2 whitespace-pre-wrap text-3xl font-semibold text-primary-700`}
+                        className={`mr-2 whitespace-pre-wrap text-3xl font-semibold text-primary-700 dark:text-primary-400`}
                     >
                         {project.title}
                     </p>
                     <GithubOutlined
-                        className="cursor-pointer text-2xl leading-none text-primary-700"
+                        className="cursor-pointer text-2xl leading-none text-primary-700 dark:text-primary-400"
                         onClick={() => openInNewTab(project.githubLink)}
                     />
                     {project.demoLink && (
                         <YoutubeOutlined
-                            className="ml-3 cursor-pointer text-3xl leading-none text-primary-700"
+                            className="ml-3 cursor-pointer text-3xl leading-none text-primary-700 dark:text-primary-400"
                             onClick={() => openInNewTab(project.demoLink)}
                         />
                     )}
                 </div>
-                <p className="text-primary-800">{project.description}</p>
+                <p className="text-primary-800 dark:text-primary-500">
+                    {project.description}
+                </p>
                 <div className="mt-2 flex flex-wrap items-baseline gap-2">
                     {project.techStack.map((tech) => (
                         <TechLogo
