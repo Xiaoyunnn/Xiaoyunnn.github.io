@@ -101,7 +101,7 @@ const Contact = () => {
                     {titles.contact}
                 </h1>
                 <div className="flex flex-col sm:flex-row">
-                    <div className="contact-height h-[300px] w-full sm:w-1/2">
+                    <div className="contact-height w-full sm:w-1/2">
                         <Image
                             src={"/contact-light.jpg"}
                             alt={"contact"}

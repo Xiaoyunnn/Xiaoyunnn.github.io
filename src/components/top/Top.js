@@ -23,7 +23,6 @@ const Top = () => {
                         words={["'m Xiao Yun", " design", " code"]}
                         loop={0}
                         cursor
-                        // cursorStyle='_'
                         typeSpeed={120}
                         deleteSpeed={70}
                         delaySpeed={1000}
