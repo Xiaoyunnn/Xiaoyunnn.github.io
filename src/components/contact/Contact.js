@@ -55,11 +55,13 @@ const Contact = () => {
         if (!trimmedName || !trimmedEmail || !trimmedMessage) {
             setIsOpenFailure(true);
             setFailureMessage("Please fill in all the fields.");
+            setIsSubmitting(false);
             return;
         }
         if (!trimmedEmail.includes("@")) {
             setIsOpenFailure(true);
             setFailureMessage("Please enter a valid email address.");
+            setIsSubmitting(false);
             return;
         }
         try {
@@ -78,6 +80,9 @@ const Contact = () => {
             if (res.ok) {
                 setIsOpenSuccess(true);
                 setEnquiry({ name: "", email: "", message: "" });
+            } else {
+                setIsOpenFailure(true);
+                setFailureMessage("Something went wrong. Please try again.");
             }
         } catch (error) {
             setIsOpenFailure(true);
