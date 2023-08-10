@@ -14,6 +14,19 @@ export const POST = async (req) => {
             },
         });
 
+        await new Promise((resolve, reject) => {
+            // verify connection configuration
+            transporter.verify(function (error, success) {
+                if (error) {
+                    console.log(error);
+                    reject(error);
+                } else {
+                    console.log("Server is ready to take our messages");
+                    resolve(success);
+                }
+            });
+        });
+
         const mailOptions = {
             from: process.env.NODEMAILER_EMAIL,
             to: process.env.TO_EMAIL,
@@ -21,13 +34,26 @@ export const POST = async (req) => {
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         };
 
-        await transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.error(error);
-            } else {
-                console.log("Email sent: " + info.response);
-            }
+        await new Promise((resolve, reject) => {
+            // send mail
+            transporter.sendMail(mailOptions, (err, info) => {
+                if (err) {
+                    console.error(err);
+                    reject(err);
+                } else {
+                    console.log("Email sent: " + info.response);
+                    resolve(info);
+                }
+            });
         });
+
+        // await transporter.sendMail(mailOptions, (error, info) => {
+        //     if (error) {
+        //         console.error(error);
+        //     } else {
+        //         console.log("Email sent: " + info.response);
+        //     }
+        // });
         return NextResponse.json({ message: "Email sent", status: 200 });
     } catch (e) {
         console.error(e);

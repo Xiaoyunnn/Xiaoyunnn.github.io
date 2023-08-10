@@ -65,51 +65,51 @@ const Contact = () => {
             return;
         }
         try {
-            // const res = await fetch("/api/contact", {
-            //     method: "POST",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     body: JSON.stringify({
-            //         name: trimmedName,
-            //         email: trimmedEmail,
-            //         message: trimmedMessage,
-            //     }),
-            // });
-            //
-            // if (res.ok) {
-            //     setIsOpenSuccess(true);
-            //     setEnquiry({ name: "", email: "", message: "" });
-            // } else {
-            //     setIsOpenFailure(true);
-            //     setFailureMessage("Something went wrong. Please try again.");
-            // }
-            const encode = (data) => {
-                return Object.keys(data)
-                    .map(
-                        (key) =>
-                            encodeURIComponent(key) +
-                            "=" +
-                            encodeURIComponent(data[key]),
-                    )
-                    .join("&");
-            };
-
-            fetch("/", {
+            const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Content-Type": "application/json",
                 },
-                body: encode({ "form-name": "contact", ...enquiry }),
-            })
-                .then(() => {
-                    setIsOpenSuccess(true);
-                    setEnquiry({ name: "", email: "", message: "" });
-                })
-                .catch((error) => {
-                    setIsOpenFailure(true);
-                    setFailureMessage(error);
-                });
+                body: JSON.stringify({
+                    name: trimmedName,
+                    email: trimmedEmail,
+                    message: trimmedMessage,
+                }),
+            });
+
+            if (res.ok) {
+                setIsOpenSuccess(true);
+                setEnquiry({ name: "", email: "", message: "" });
+            } else {
+                setIsOpenFailure(true);
+                setFailureMessage("Something went wrong. Please try again.");
+            }
+            // const encode = (data) => {
+            //     return Object.keys(data)
+            //         .map(
+            //             (key) =>
+            //                 encodeURIComponent(key) +
+            //                 "=" +
+            //                 encodeURIComponent(data[key]),
+            //         )
+            //         .join("&");
+            // };
+            //
+            // fetch("/", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/x-www-form-urlencoded",
+            //     },
+            //     body: encode({ "form-name": "contact", ...enquiry }),
+            // })
+            //     .then(() => {
+            //         setIsOpenSuccess(true);
+            //         setEnquiry({ name: "", email: "", message: "" });
+            //     })
+            //     .catch((error) => {
+            //         setIsOpenFailure(true);
+            //         setFailureMessage(error);
+            //     });
         } catch (error) {
             setIsOpenFailure(true);
             setFailureMessage("Something went wrong. Please try again.");
