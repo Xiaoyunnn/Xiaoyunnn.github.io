@@ -1,1 +1,1 @@
-The deployment steps are referenced from https://github.com/gitname/react-gh-pages
+POST method not allowed with GitHub Pages, resorted to deployment with Netlify: https://xiaoyunwu.netlify.app

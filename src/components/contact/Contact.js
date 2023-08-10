@@ -84,32 +84,6 @@ const Contact = () => {
                 setIsOpenFailure(true);
                 setFailureMessage("Something went wrong. Please try again.");
             }
-            // const encode = (data) => {
-            //     return Object.keys(data)
-            //         .map(
-            //             (key) =>
-            //                 encodeURIComponent(key) +
-            //                 "=" +
-            //                 encodeURIComponent(data[key]),
-            //         )
-            //         .join("&");
-            // };
-            //
-            // fetch("/", {
-            //     method: "POST",
-            //     headers: {
-            //         "Content-Type": "application/x-www-form-urlencoded",
-            //     },
-            //     body: encode({ "form-name": "contact", ...enquiry }),
-            // })
-            //     .then(() => {
-            //         setIsOpenSuccess(true);
-            //         setEnquiry({ name: "", email: "", message: "" });
-            //     })
-            //     .catch((error) => {
-            //         setIsOpenFailure(true);
-            //         setFailureMessage(error);
-            //     });
         } catch (error) {
             setIsOpenFailure(true);
             setFailureMessage("Something went wrong. Please try again.");

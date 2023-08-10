@@ -47,13 +47,6 @@ export const POST = async (req) => {
             });
         });
 
-        // await transporter.sendMail(mailOptions, (error, info) => {
-        //     if (error) {
-        //         console.error(error);
-        //     } else {
-        //         console.log("Email sent: " + info.response);
-        //     }
-        // });
         return NextResponse.json({ message: "Email sent", status: 200 });
     } catch (e) {
         console.error(e);
