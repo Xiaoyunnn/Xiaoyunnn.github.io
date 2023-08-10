@@ -1,5 +1,4 @@
 import "./globals.css";
-import { nanumMyeongjo, barlowSemiCondensed, playFairDisplay } from "./font.js";
 import { ThemeProvider } from "./themeProvider.js";
 
 export const metadata = {
@@ -11,10 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body
-                className={`${nanumMyeongjo.variable} ${barlowSemiCondensed.variable} ${playFairDisplay.variable}`}
-                suppressHydrationWarning={true}
-            >
+            <body suppressHydrationWarning={true}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"

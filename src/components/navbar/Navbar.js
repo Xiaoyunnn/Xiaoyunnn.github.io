@@ -8,8 +8,6 @@ import {
     LinkedinOutlined,
     MenuOutlined,
 } from "@ant-design/icons";
-import MoonIcon from "@/components/icons/MoonIcon";
-import SunIcon from "@/components/icons/SunIcon";
 import { githubLink, linkedinLink, navLinks } from "@/utils";
 import { openInNewTab } from "@/utils/common";
 import { ThemeSwitcher } from "@/components/navbar/ThemeSwitcher";
