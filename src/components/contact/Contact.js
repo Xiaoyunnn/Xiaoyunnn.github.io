@@ -135,6 +135,7 @@ const Contact = () => {
                         />
                     </div>
                     <form
+                        data-netlify="true"
                         className="font-nanum w-full border-[1px] px-6 py-[10%] dark:border-0 dark:bg-primary-800 sm:w-1/2 sm:px-12"
                         onSubmit={handleSubmit}
                     >
