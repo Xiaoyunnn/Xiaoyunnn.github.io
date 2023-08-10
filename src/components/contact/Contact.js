@@ -1,7 +1,7 @@
 "use client";
 import { titles } from "@/utils";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FailureModal from "@/components/modal/FailureModal";
 import SuccessModal from "@/components/modal/SuccessModal";
 import Spinner from "@/components/contact/Spinner";
@@ -11,10 +11,28 @@ import { slideIn } from "@/utils/motion";
 import { styles } from "@/app/styles";
 
 const Contact = () => {
-    const darkMode =
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches);
+    // const darkMode =
+    //     localStorage.theme === "dark" ||
+    //     (!("theme" in localStorage) &&
+    //         window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            setDarkMode(true);
+            localStorage.theme = "dark";
+            document.documentElement.classList.add("dark");
+        } else {
+            setDarkMode(false);
+            localStorage.theme = "light";
+            document.documentElement.classList.remove("dark");
+        }
+    }, []);
+
     const [enquiry, setEnquiry] = useState({
         name: "",
         email: "",

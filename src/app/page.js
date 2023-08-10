@@ -11,11 +11,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
-    const [darkMode, setDarkMode] = useState(
-        localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches),
-    );
+    const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         if (
@@ -23,9 +19,11 @@ export default function Home() {
             (!("theme" in localStorage) &&
                 window.matchMedia("(prefers-color-scheme: dark)").matches)
         ) {
+            setDarkMode(true);
             localStorage.theme = "dark";
             document.documentElement.classList.add("dark");
         } else {
+            setDarkMode(false);
             localStorage.theme = "light";
             document.documentElement.classList.remove("dark");
         }
