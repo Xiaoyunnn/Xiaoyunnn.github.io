@@ -1,6 +1,5 @@
 import "./globals.css";
 import { nanumMyeongjo, barlowSemiCondensed, playFairDisplay } from "./font.js";
-import Head from "next/head";
 
 export const metadata = {
     title: "Xiao Yun",

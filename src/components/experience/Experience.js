@@ -1,11 +1,7 @@
 import { experiences, titles } from "@/utils";
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "@/app/styles";
-import Image from "next/image";
 import { textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/hoc";

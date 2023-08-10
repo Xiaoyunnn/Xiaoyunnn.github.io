@@ -7,7 +7,7 @@ import SuccessModal from "@/components/modal/SuccessModal";
 import Spinner from "@/components/contact/Spinner";
 import { SectionWrapper } from "@/hoc";
 import { motion } from "framer-motion";
-import { slideIn, textVariant } from "@/utils/motion";
+import { slideIn } from "@/utils/motion";
 import { styles } from "@/app/styles";
 
 const Contact = () => {

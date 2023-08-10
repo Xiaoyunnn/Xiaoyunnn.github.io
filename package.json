@@ -1,13 +1,15 @@
 {
     "name": "portfolio",
     "version": "0.1.0",
-    "private": true,
+    "homepage": "https://Xiaoyunnn.github.io",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "lint": "next lint --fix",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"
@@ -35,6 +37,7 @@
     },
     "devDependencies": {
         "eslint-config-prettier": "^8.8.0",
+        "gh-pages": "^5.0.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.3",
         "prettier": "^3.0.0",

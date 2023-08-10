@@ -1,6 +1,6 @@
 "use client";
 import "./navbar.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import {
     CloseOutlined,

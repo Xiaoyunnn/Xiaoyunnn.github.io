@@ -1,9 +1,5 @@
 import Image from "next/image";
-import {
-    GithubOutlined,
-    GlobalOutlined,
-    YoutubeOutlined,
-} from "@ant-design/icons";
+import { GithubOutlined, YoutubeOutlined } from "@ant-design/icons";
 import { openInNewTab } from "@/utils/common";
 import TechLogo from "@/components/skills/TechLogo";
 import { useState } from "react";
