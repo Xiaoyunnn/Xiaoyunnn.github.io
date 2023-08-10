@@ -7,41 +7,12 @@ import Experience from "@/components/experience/Experience";
 import Projects from "@/components/projects/Projects";
 import Contact from "@/components/contact/Contact";
 import ScrollTop from "@/components/scrollTop/ScrollTop";
-import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
-    const [darkMode, setDarkMode] = useState(false);
-
-    useEffect(() => {
-        if (
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-            setDarkMode(true);
-            localStorage.theme = "dark";
-            document.documentElement.classList.add("dark");
-        } else {
-            setDarkMode(false);
-            localStorage.theme = "light";
-            document.documentElement.classList.remove("dark");
-        }
-    }, []);
-
-    const toggleDarkMode = (isDark = darkMode) => {
-        setDarkMode(isDark);
-        if (isDark) {
-            document.documentElement.classList.add("dark");
-            localStorage.theme = "dark";
-        } else {
-            document.documentElement.classList.remove("dark");
-            localStorage.theme = "light";
-        }
-    };
     return (
         <>
-            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <Navbar />
             <main className="dark:bg-[#19262d]">
                 <ScrollTop />
                 <Top />

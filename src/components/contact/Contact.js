@@ -9,34 +9,15 @@ import { SectionWrapper } from "@/hoc";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 import { styles } from "@/app/styles";
+import { useTheme } from "next-themes";
 
 const Contact = () => {
-    let darkMode = false;
-    if (typeof window !== "undefined") {
-        localStorage.setItem("name", "Tom");
-        darkMode =
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches);
-    }
+    const [mounted, setMounted] = useState(false);
+    const { theme } = useTheme();
 
-    // const [darkMode, setDarkMode] = useState(false);
-    //
-    // useEffect(() => {
-    //     if (
-    //         localStorage.theme === "dark" ||
-    //         (!("theme" in localStorage) &&
-    //             window.matchMedia("(prefers-color-scheme: dark)").matches)
-    //     ) {
-    //         setDarkMode(true);
-    //         localStorage.theme = "dark";
-    //         document.documentElement.classList.add("dark");
-    //     } else {
-    //         setDarkMode(false);
-    //         localStorage.theme = "light";
-    //         document.documentElement.classList.remove("dark");
-    //     }
-    // }, [setDarkMode]);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const [enquiry, setEnquiry] = useState({
         name: "",
@@ -106,6 +87,10 @@ const Contact = () => {
         }
     };
 
+    if (!mounted) {
+        return null;
+    }
+
     return (
         <>
             <motion.div
@@ -130,7 +115,7 @@ const Contact = () => {
                     <div className="contact-height w-full sm:w-1/2">
                         <Image
                             src={
-                                darkMode
+                                theme === "dark"
                                     ? "/contact-dark.png"
                                     : "/contact-light.jpg"
                             }
@@ -138,7 +123,9 @@ const Contact = () => {
                             width={400}
                             height={400}
                             className={`h-full w-full object-cover ${
-                                darkMode ? "object-bottom" : "object-center"
+                                theme === "dark"
+                                    ? "object-bottom"
+                                    : "object-center"
                             }`}
                         />
                     </div>

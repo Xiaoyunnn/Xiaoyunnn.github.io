@@ -2,44 +2,32 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import Image from "next/image";
 import TechLogo from "@/components/skills/TechLogo";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 const ExperienceCard = ({ experience }) => {
+    const [mounted, setMounted] = useState(false);
     const [hoverText, setHoverText] = useState("");
+    const { theme } = useTheme();
 
-    let darkMode = false;
-    if (typeof window !== "undefined") {
-        localStorage.setItem("name", "Tom");
-        darkMode =
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return null;
     }
-
-    // useEffect(() => {
-    //     if (
-    //         localStorage.theme === "dark" ||
-    //         (!("theme" in localStorage) &&
-    //             window.matchMedia("(prefers-color-scheme: dark)").matches)
-    //     ) {
-    //         setDarkMode(true);
-    //         localStorage.theme = "dark";
-    //         document.documentElement.classList.add("dark");
-    //     } else {
-    //         setDarkMode(false);
-    //         localStorage.theme = "light";
-    //         document.documentElement.classList.remove("dark");
-    //     }
-    // }, [setDarkMode]);
 
     return (
         <VerticalTimelineElement
             date={experience.date}
             dateClassName={
-                darkMode ? "text-primary-300 py-2" : "text-primary-700 py-2"
+                theme === "dark"
+                    ? "text-primary-300 py-2"
+                    : "text-primary-700 py-2"
             }
             iconStyle={{ background: "#fff" }}
             contentStyle={
-                darkMode
+                theme === "dark"
                     ? {
                           background: "#19262d",
                       }

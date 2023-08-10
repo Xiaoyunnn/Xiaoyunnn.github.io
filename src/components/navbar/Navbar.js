@@ -12,8 +12,9 @@ import MoonIcon from "@/components/icons/MoonIcon";
 import SunIcon from "@/components/icons/SunIcon";
 import { githubLink, linkedinLink, navLinks } from "@/utils";
 import { openInNewTab } from "@/utils/common";
+import { ThemeSwitcher } from "@/components/navbar/ThemeSwitcher";
 
-const Navbar = ({ darkMode, toggleDarkMode }) => {
+const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     const handleOpen = (elementId) => {
@@ -72,15 +73,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                             className="cursor-pointer text-xl leading-none text-white"
                             onClick={() => openInNewTab(githubLink)}
                         />
-                        {darkMode ? (
-                            <SunIcon
-                                toggleDarkMode={() => toggleDarkMode(false)}
-                            />
-                        ) : (
-                            <MoonIcon
-                                toggleDarkMode={() => toggleDarkMode(true)}
-                            />
-                        )}
+                        <ThemeSwitcher />
                     </div>
                     <div className="nav-icon" onClick={() => handleOpen("")}>
                         {open ? <CloseOutlined /> : <MenuOutlined />}
