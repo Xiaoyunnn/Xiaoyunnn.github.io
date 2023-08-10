@@ -11,10 +11,15 @@ import { slideIn } from "@/utils/motion";
 import { styles } from "@/app/styles";
 
 const Contact = () => {
-    const darkMode =
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches);
+    let darkMode = false;
+    if (typeof window !== "undefined") {
+        localStorage.setItem("name", "Tom");
+        darkMode =
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+
     // const [darkMode, setDarkMode] = useState(false);
     //
     // useEffect(() => {
@@ -31,7 +36,7 @@ const Contact = () => {
     //         localStorage.theme = "light";
     //         document.documentElement.classList.remove("dark");
     //     }
-    // }, []);
+    // }, [setDarkMode]);
 
     const [enquiry, setEnquiry] = useState({
         name: "",
