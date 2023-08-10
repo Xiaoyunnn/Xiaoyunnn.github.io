@@ -7,7 +7,7 @@ import SuccessModal from "@/components/modal/SuccessModal";
 import Spinner from "@/components/contact/Spinner";
 import { SectionWrapper } from "@/hoc";
 import { motion } from "framer-motion";
-import { slideIn } from "@/utils/motion";
+import { fadeIn, slideIn } from "@/utils/motion";
 import { styles } from "@/app/styles";
 import { useTheme } from "next-themes";
 
@@ -94,7 +94,7 @@ const Contact = () => {
     return (
         <>
             <motion.div
-                variants={slideIn("down", "tween", 0.2, 1)}
+                variants={fadeIn("up", "tween", 0.2, 1)}
                 className="py-16"
             >
                 {isOpenFailure && (
