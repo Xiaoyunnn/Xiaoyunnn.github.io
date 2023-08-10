@@ -11,27 +11,27 @@ import { slideIn } from "@/utils/motion";
 import { styles } from "@/app/styles";
 
 const Contact = () => {
-    // const darkMode =
-    //     localStorage.theme === "dark" ||
-    //     (!("theme" in localStorage) &&
-    //         window.matchMedia("(prefers-color-scheme: dark)").matches);
-    const [darkMode, setDarkMode] = useState(false);
-
-    useEffect(() => {
-        if (
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-            setDarkMode(true);
-            localStorage.theme = "dark";
-            document.documentElement.classList.add("dark");
-        } else {
-            setDarkMode(false);
-            localStorage.theme = "light";
-            document.documentElement.classList.remove("dark");
-        }
-    }, []);
+    const darkMode =
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+    // const [darkMode, setDarkMode] = useState(false);
+    //
+    // useEffect(() => {
+    //     if (
+    //         localStorage.theme === "dark" ||
+    //         (!("theme" in localStorage) &&
+    //             window.matchMedia("(prefers-color-scheme: dark)").matches)
+    //     ) {
+    //         setDarkMode(true);
+    //         localStorage.theme = "dark";
+    //         document.documentElement.classList.add("dark");
+    //     } else {
+    //         setDarkMode(false);
+    //         localStorage.theme = "light";
+    //         document.documentElement.classList.remove("dark");
+    //     }
+    // }, []);
 
     const [enquiry, setEnquiry] = useState({
         name: "",
