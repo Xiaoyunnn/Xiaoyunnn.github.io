@@ -94,7 +94,7 @@ const Contact = () => {
     return (
         <>
             <motion.div
-                variants={slideIn("right", "tween", 0.2, 1)}
+                variants={slideIn("down", "tween", 0.2, 1)}
                 className="py-16"
             >
                 {isOpenFailure && (

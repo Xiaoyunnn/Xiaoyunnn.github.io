@@ -181,7 +181,7 @@ export const projects = {
     favorites: [
         {
             title: "Punkt.",
-            img: "/icons/punkt.png",
+            img: "/icons/punkt-leaderboard.png",
             demoLink: "https://punkt-orbital.netlify.app",
             githubLink: "https://github.com/angkoonhwee/Punkt-Milestone3",
             description:
@@ -212,7 +212,7 @@ export const projects = {
         },
         {
             title: "Reisen",
-            img: "/icons/reisen-logo.png",
+            img: "/icons/reisen.png",
             demoLink:
                 "https://drive.google.com/file/d/17xKyHZQK-Rqd3nSEV-8urGacpFHgoXqx/view?usp=sharing",
             githubLink: "https://github.com/angkoonhian/huawei-reisen",
@@ -237,7 +237,7 @@ export const projects = {
         },
         {
             title: "Tuition Address Book",
-            img: "/svg-logos/tab.svg",
+            img: "/icons/tab.png",
             githubLink: "https://github.com/AY2122S1-CS2103T-F13-3/tp",
             description:
                 "TAB is a all-in-one tuition management application for private tutors. TAB enables you to" +
