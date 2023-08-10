@@ -7,7 +7,7 @@ import SuccessModal from "@/components/modal/SuccessModal";
 import Spinner from "@/components/contact/Spinner";
 import { SectionWrapper } from "@/hoc";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn } from "@/utils/motion";
+import { fadeIn } from "@/utils/motion";
 import { styles } from "@/app/styles";
 import { useTheme } from "next-themes";
 
