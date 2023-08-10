@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Top = () => {
     return (
-        <div>
+        <div id="top">
             <div className="relative">
                 <div className="relative h-screen w-screen">
                     <Image

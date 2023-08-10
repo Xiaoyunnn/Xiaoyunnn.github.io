@@ -35,7 +35,7 @@ const Navbar = () => {
             <nav className="navbar" onClick={(e) => e.stopPropagation()}>
                 <div className="nav-container">
                     <Link
-                        href="/"
+                        href=""
                         className="nav-logo"
                         scroll={false}
                         onClick={() => {
