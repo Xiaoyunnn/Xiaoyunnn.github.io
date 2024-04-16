@@ -5,7 +5,7 @@ const Top = () => {
     return (
         <div id="top">
             <div className="relative">
-                <div className="relative h-screen w-screen">
+                <div className="relative h-screen w-full">
                     <Image
                         alt="Hi"
                         src="/bg2.jpg"
