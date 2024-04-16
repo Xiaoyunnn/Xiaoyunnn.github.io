@@ -20,14 +20,12 @@ const Top = () => {
                 <h2 className="heading-name">
                     I
                     <Typewriter
-                        words={["'m Xiao Yun", " design", " code"]}
+                        words={["'m Xiaoyun", " design", " code"]}
                         loop={0}
                         cursor
                         typeSpeed={120}
                         deleteSpeed={70}
                         delaySpeed={1000}
-                        // onLoopDone={handleDone}
-                        // onType={handleType}
                     />
                 </h2>
             </div>

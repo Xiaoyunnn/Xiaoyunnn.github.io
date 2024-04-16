@@ -14,7 +14,7 @@ export const titles = {
     contact: "Contact Me.",
 };
 
-export const aboutMeDescription = `I'm Xiao Yun, a final year student pursuing Bachelor of Computing (Honours) in Computer Science at the National University of Singapore. As a full stack enthusiast, I have actively sought opportunities to expand my skill set in both front-end and back-end development. I have hands-on experience with web design with Figma, front-end technologies e.g. React.js and responsive design principles. On the server side, I have worked with databases and I'm familiar with backend frameworks like Node.js. 
+export const aboutMeDescription = `I'm Xiaoyun, I graduated with Bachelor of Computing (Honours) in Computer Science from the National University of Singapore. As a full stack enthusiast, I have actively sought opportunities to expand my skill set in both front-end and back-end development. I have hands-on experience with web design with Figma, front-end technologies e.g. React.js and responsive design principles. On the server side, I have worked with databases and I'm familiar with backend frameworks like Node.js. 
 
 I thrive on challenges and continuously seek opportunities to grow in the rapidly evolving field of technology. As I embark on the journey towards my professional career, I am excited to join a dynamic team where I can leverage my skills and contribute to building innovative applications.
 `;
@@ -102,6 +102,52 @@ export const skills = {
 };
 
 export const experiences = [
+    {
+        title: "Analyst (Software Engineer)",
+        company: "Goldman Sachs",
+        companyLogo: "/icons/gs.png",
+        date: "Mar 2024 - Present",
+        description: [
+            "Worked under the Futures Technology team.",
+            "Implemented new features to improve the trading flow of our users, e.g. calculating and displaying" +
+                " users’ position occupied margin for futures and options as part of pre-trade risk controls.",
+        ],
+        techStack: [
+            {
+                name: "Java",
+                path: "/svg-logos/java.svg",
+            },
+            {
+                name: "Angular",
+                path: "/svg-logos/angular.svg",
+            },
+        ],
+    },
+    {
+        title: "Software Engineer Intern",
+        company: "PayPal",
+        companyLogo: "/icons/pp.png",
+        date: "Aug 2023 - Dec 2023",
+        description: [
+            "Interned under the Escheatment team.",
+            "Added and tested new frontend features e.g. generation of reports for Escheatment processes with Next.js.",
+            "Refactored manual mappers for mapping between different object models to use Java MapStruct so as to simplify the implementation and improve code maintainability.",
+        ],
+        techStack: [
+            {
+                name: "Java",
+                path: "/svg-logos/java.svg",
+            },
+            {
+                name: "Next.js",
+                path: "/svg-logos/nextjs.svg",
+            },
+            {
+                name: "React.js",
+                path: "/svg-logos/react.svg",
+            },
+        ],
+    },
     {
         title: "Summer Analyst (Software Engineer)",
         company: "Goldman Sachs",

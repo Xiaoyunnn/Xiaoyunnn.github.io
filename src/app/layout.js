@@ -2,7 +2,7 @@ import "./globals.css";
 import { ThemeProvider } from "./themeProvider.js";
 
 export const metadata = {
-    title: "Xiao Yun",
+    title: "Xiaoyun",
     description:
         "I am a final year Computer Science student passion about building beautiful and useful full-stack applications.",
 };
