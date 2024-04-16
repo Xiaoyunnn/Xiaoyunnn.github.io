@@ -91,8 +91,6 @@ jobs:
                   NODEMAILER_PW: ${{ secrets.NODEMAILER_PW }}
                   NODEMAILER_EMAIL: ${{ secrets.NODEMAILER_EMAIL }}
                   TO_EMAIL: ${{ vars.TO_EMAIL }}
-            - name: Static HTML export with Next.js
-              run: ${{ steps.detect-package-manager.outputs.runner }} next export
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
               with:
