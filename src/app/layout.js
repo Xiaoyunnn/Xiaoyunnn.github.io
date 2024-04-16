@@ -4,7 +4,8 @@ import { ThemeProvider } from "./themeProvider.js";
 export const metadata = {
     title: "Xiaoyun",
     description:
-        "I am a final year Computer Science student passion about building beautiful and useful full-stack applications.",
+        "I am a software engineer passionate about building beautiful and useful full-stack" +
+        " applications.",
 };
 
 export default function RootLayout({ children }) {
