@@ -112,6 +112,7 @@ html {
     color: white;
     padding: 0.5rem 1.5rem;
     font-family: "EB Garamond", sans-serif;
+    cursor: pointer;
 }
 
 .image-div {
