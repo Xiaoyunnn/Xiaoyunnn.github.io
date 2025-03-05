@@ -53,10 +53,6 @@ export const skills = {
             path: "/svg-logos/nodejs.svg",
         },
         {
-            name: "C++",
-            path: "/svg-logos/cpp.svg",
-        },
-        {
             name: "MongoDB",
             path: "/svg-logos/mongodb.svg",
         },
@@ -93,6 +89,10 @@ export const skills = {
         {
             name: "Golang",
             path: "/svg-logos/golang.svg",
+        },
+        {
+            name: "C++",
+            path: "/svg-logos/cpp.svg",
         },
         {
             name: "C",

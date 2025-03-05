@@ -116,8 +116,8 @@ const Contact = () => {
                     />
                 )}
                 <h1 className={styles.sectionHeadText}>{titles.contact}</h1>
-                <div className="flex flex-col sm:flex-row">
-                    <div className="contact-height w-full sm:w-1/2">
+                <div className="flex flex-col items-stretch sm:flex-row">
+                    <div className="contact-height w-full flex-1 sm:w-1/2">
                         <Image
                             src={
                                 theme === "dark"
@@ -136,7 +136,7 @@ const Contact = () => {
                     </div>
                     <form
                         data-netlify="true"
-                        className="font-nanum dark:bg-primary-800 w-full border-[1px] px-6 py-[10%] sm:w-1/2 sm:px-12 dark:border-0"
+                        className="font-nanum dark:bg-primary-800 w-full flex-1 border-[1px] px-6 py-[10%] sm:w-1/2 sm:px-12 dark:border-0"
                         onSubmit={handleSubmit}
                     >
                         <div className="mb-4 flex flex-col">

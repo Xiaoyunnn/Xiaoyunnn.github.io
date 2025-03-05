@@ -68,6 +68,7 @@ html {
 
 .font-nanum {
     font-family: "EB Garamond", serif;
+    letter-spacing: 0.5px;
 }
 
 .font-barlow {
@@ -79,7 +80,7 @@ html {
 }
 
 .contact-height {
-    max-height: calc(100vh - 180px);
+    max-height: 100%;
 }
 
 .heading-hi {
@@ -150,5 +151,6 @@ html {
 
     .contact-height {
         height: 300px;
+        flex: none !important;
     }
 }

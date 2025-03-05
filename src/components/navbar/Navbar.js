@@ -62,13 +62,13 @@ const Navbar = () => {
                             );
                         })}
                     </ul>
-                    <div className="grid grid-cols-3 items-center gap-3">
+                    <div className="grid grid-cols-3 items-center gap-3 text-white">
                         <LinkedinOutlined
-                            className="cursor-pointer text-xl leading-none text-white"
+                            className="cursor-pointer text-xl leading-none"
                             onClick={() => openInNewTab(linkedinLink)}
                         />
                         <GithubOutlined
-                            className="cursor-pointer text-xl leading-none text-white"
+                            className="cursor-pointer text-xl leading-none"
                             onClick={() => openInNewTab(githubLink)}
                         />
                         <ThemeSwitcher />
