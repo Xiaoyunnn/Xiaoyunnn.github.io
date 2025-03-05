@@ -136,13 +136,13 @@ const Contact = () => {
                     </div>
                     <form
                         data-netlify="true"
-                        className="font-nanum w-full border-[1px] px-6 py-[10%] dark:border-0 dark:bg-primary-800 sm:w-1/2 sm:px-12"
+                        className="font-nanum dark:bg-primary-800 w-full border-[1px] px-6 py-[10%] sm:w-1/2 sm:px-12 dark:border-0"
                         onSubmit={handleSubmit}
                     >
                         <div className="mb-4 flex flex-col">
                             <label
                                 htmlFor="name"
-                                className="font-nanum mb-2 text-sm text-primary-700 dark:text-primary-600"
+                                className="font-nanum text-primary-700 dark:text-primary-600 mb-2"
                             >
                                 Name
                             </label>
@@ -151,7 +151,7 @@ const Contact = () => {
                                 type="text"
                                 id="name"
                                 name="name"
-                                className="bg-primary-200 px-3 py-2 text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
+                                className="bg-primary-200 text-primary-800 placeholder:text-primary-500 dark:bg-primary-400 dark:placeholder:text-primary-600 px-3 py-2 focus:outline-0"
                                 placeholder="Enter your name"
                                 value={enquiry.name}
                                 onChange={handleChange}
@@ -160,7 +160,7 @@ const Contact = () => {
                         <div className="mb-4 flex flex-col">
                             <label
                                 htmlFor="email"
-                                className="font-nanum mb-2 text-sm text-primary-700 dark:text-primary-600"
+                                className="font-nanum text-primary-700 dark:text-primary-600 mb-2"
                             >
                                 Email
                             </label>
@@ -169,7 +169,7 @@ const Contact = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="bg-primary-200 px-3 py-2 text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
+                                className="bg-primary-200 text-primary-800 placeholder:text-primary-500 dark:bg-primary-400 dark:placeholder:text-primary-600 px-3 py-2 focus:outline-0"
                                 placeholder="Enter your email"
                                 value={enquiry.email}
                                 onChange={handleChange}
@@ -178,7 +178,7 @@ const Contact = () => {
                         <div className="mb-4 flex flex-col">
                             <label
                                 htmlFor="message"
-                                className="font-nanum mb-2 text-sm text-primary-700 dark:text-primary-600"
+                                className="font-nanum text-primary-700 dark:text-primary-600 mb-2"
                             >
                                 Message
                             </label>
@@ -187,7 +187,7 @@ const Contact = () => {
                                 name="message"
                                 rows={6}
                                 required={true}
-                                className="bg-primary-200 px-3 py-2 text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
+                                className="bg-primary-200 text-primary-800 placeholder:text-primary-500 dark:bg-primary-400 dark:placeholder:text-primary-600 px-3 py-2 focus:outline-0"
                                 placeholder="Leave your message here..."
                                 value={enquiry.message}
                                 onChange={handleChange}
@@ -200,7 +200,7 @@ const Contact = () => {
                             type="submit"
                             className={`btn transition-colors ease-in-out ${
                                 isSubmitting
-                                    ? "cursor-not-allowed bg-primary-700 dark:bg-primary-750"
+                                    ? "bg-primary-700 dark:bg-primary-750 cursor-not-allowed"
                                     : "bg-primary-600 hover:bg-primary-700 dark:bg-primary-700" +
                                       " dark:hover:bg-primary-750"
                             }`}

@@ -1,8 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=EB+Garamond:wght@400..800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=EB+Garamond:wght@400..800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap")
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --breakpoint-*: initial;
+    --breakpoint-xs: 500px;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 955px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+
+    --color-primary-200: #ecf0f1;
+    --color-primary-300: #dae4e7;
+    --color-primary-400: #c1d3d7;
+    --color-primary-500: #98b7bf;
+    --color-primary-600: #849ea3;
+    --color-primary-700: #65797d;
+    --color-primary-750: #556a6e;
+    --color-primary-800: #445a5b;
+
+    --color-secondary-700: #3e5463;
+    --color-secondary-800: 1C2B36;
+
+    --color-white: white;
+    --color-transparent: transparent;
+
+    --color-yellow-light: #eadab5;
+    --color-yellow: #eadab5;
+    --color-yellow-dark: #eadab5;
+
+    --color-danger-300: #fbefef;
+    --color-danger-400: #f9dad9;
+    --color-danger-500: #efbebe;
+    --color-danger-600: #d07575;
+    --color-danger-700: #d55d5d;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
 
 html {
     scroll-behavior: smooth;
