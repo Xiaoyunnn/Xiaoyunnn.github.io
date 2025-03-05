@@ -1,12 +1,12 @@
 import {
-    Nanum_Myeongjo,
+    EB_Garamond,
     Barlow_Semi_Condensed,
     Playfair_Display,
 } from "next/font/google";
 
-export const nanumMyeongjo = Nanum_Myeongjo({
+export const garamond = EB_Garamond({
     subsets: ["latin"],
-    weight: ["400", "700", "800"],
+    weight: ["400", "500", "600", "700"],
     variable: "--font-nanum",
 });
 

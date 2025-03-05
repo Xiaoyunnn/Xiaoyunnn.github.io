@@ -151,7 +151,7 @@ const Contact = () => {
                                 type="text"
                                 id="name"
                                 name="name"
-                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
+                                className="bg-primary-200 px-3 py-2 text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
                                 placeholder="Enter your name"
                                 value={enquiry.name}
                                 onChange={handleChange}
@@ -169,7 +169,7 @@ const Contact = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
+                                className="bg-primary-200 px-3 py-2 text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
                                 placeholder="Enter your email"
                                 value={enquiry.email}
                                 onChange={handleChange}
@@ -187,7 +187,7 @@ const Contact = () => {
                                 name="message"
                                 rows={6}
                                 required={true}
-                                className="bg-primary-200 px-3 py-2 font-semibold text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
+                                className="bg-primary-200 px-3 py-2 text-primary-800 placeholder:text-primary-500 focus:outline-0 dark:bg-primary-400 dark:placeholder:text-primary-600"
                                 placeholder="Leave your message here..."
                                 value={enquiry.message}
                                 onChange={handleChange}
