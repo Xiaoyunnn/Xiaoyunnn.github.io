@@ -8,7 +8,7 @@ const OtherProject = ({ project, index }) => {
     return (
         <motion.div
             variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-            className="font-barlow h-full bg-primary-700 p-4"
+            className="font-barlow bg-primary-700 h-full p-4"
         >
             <Image
                 alt={project.title}
@@ -17,17 +17,17 @@ const OtherProject = ({ project, index }) => {
                 width={250}
                 className="w-full object-cover object-top md:h-[250px]"
             />
-            <div className="mb-1 mt-3 flex flex-wrap items-center">
-                <p className={`mr-2 text-xl font-semibold text-primary-200`}>
+            <div className="mt-3 mb-1 flex flex-wrap items-center">
+                <p className={`text-primary-200 mr-2 text-xl font-semibold`}>
                     {project.title}
                 </p>
                 <GithubOutlined
-                    className="cursor-pointer text-lg leading-none text-primary-200"
+                    className="!text-primary-200 cursor-pointer text-lg leading-none"
                     onClick={() => openInNewTab(project.githubLink)}
                 />
                 {project.demoLink && (
                     <YoutubeOutlined
-                        className="ml-2 cursor-pointer text-2xl leading-none text-white"
+                        className="!text-primary-200 ml-2 cursor-pointer text-2xl leading-none"
                         onClick={() => openInNewTab(project.demoLink)}
                     />
                 )}
@@ -37,7 +37,7 @@ const OtherProject = ({ project, index }) => {
                 {project.techStack.map((tech) => (
                     <span
                         key={`${project.title}-${tech}`}
-                        className="mr-2 font-medium text-yellow-light"
+                        className="text-yellow-light mr-2 font-medium"
                     >
                         {tech}
                     </span>

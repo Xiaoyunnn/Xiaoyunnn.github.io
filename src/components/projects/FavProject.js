@@ -28,20 +28,20 @@ const FavProject = ({ project, index }) => {
                     />
                 </div>
             </div>
-            <div className="font-barlow mt-3 md:ml-8 md:mt-0">
+            <div className="font-barlow mt-3 md:mt-0 md:ml-8">
                 <div className="mb-2 flex flex-wrap items-center">
                     <p
-                        className={`mr-2 whitespace-pre-wrap text-3xl font-semibold text-primary-700 dark:text-primary-400`}
+                        className={`text-primary-700 dark:text-primary-400 mr-2 text-3xl font-semibold whitespace-pre-wrap`}
                     >
                         {project.title}
                     </p>
                     <GithubOutlined
-                        className="cursor-pointer text-2xl leading-none text-primary-700 dark:text-primary-400"
+                        className="!text-primary-700 dark:!text-primary-400 cursor-pointer text-2xl leading-none"
                         onClick={() => openInNewTab(project.githubLink)}
                     />
                     {project.demoLink && (
                         <YoutubeOutlined
-                            className="ml-3 cursor-pointer text-3xl leading-none text-primary-700 dark:text-primary-400"
+                            className="!text-primary-700 dark:!text-primary-400 ml-3 cursor-pointer text-3xl leading-none"
                             onClick={() => openInNewTab(project.demoLink)}
                         />
                     )}
